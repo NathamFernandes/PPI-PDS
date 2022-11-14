@@ -1,0 +1,50 @@
+html {
+    height: 100%;
+    background-color: #212126;
+}
+body {
+    background-color: #212126;
+    font-family: Agency FB;
+    margin: 200px;
+}
+
+#imagem-csbrasil-paginas {
+    height: 8%; 
+    width: 7.5%;
+}
+
+#div-times-brasil {
+    display: flex;
+}
+
+#imagem-times-brasil {
+    margin: auto;
+}
+
+.brazilteams {
+    width: 150px;
+    height: 150px;
+    padding: 5px;
+    transition: all 0.3s;
+}
+
+.brazilteams:hover {
+    width: 185px;
+    height: 185px;
+    transition: all 0.3s;
+    margin: -8px;
+}
+
+#legenda-times-brasil {
+    font-family: Agency FB;
+    font-size: x-large;
+    font-weight: bolder;
+    color: white;
+    margin-right: 30px;
+    padding: 20px;
+}
+
+@font-face {
+    font-family: Agency FB;
+    src: url('fonts/agency-fb-2.ttf')
+}

@@ -45,8 +45,8 @@ header {
 /* -------- */
 
 #all {
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 220px;
+    margin-right: 220px;
 }
 
 #div-times-brasil {
@@ -80,7 +80,36 @@ header {
     padding: 20px;
 }
 
+/* Nova nomenclatura. Página Inicial. */
 
+#div-03 {
+    background-color: aqua;
+    padding: 20px;
+    margin-bottom: 5px;
+}
+
+#div-04 {
+    background-color: aqua; 
+    padding: 20px;
+    text-align: right;
+    margin-bottom: 5px;
+}
+
+#p-03 {
+    color: white; 
+    word-break: normal; 
+    font-size: x-large; 
+    text-align: justify; 
+    margin-right: 300px;
+}
+
+#p-04 {
+    color: white; 
+    word-break: normal; 
+    font-size: x-large; 
+    text-align: justify; 
+    margin-left: 300px;
+}
 
 /* TESTES */
 

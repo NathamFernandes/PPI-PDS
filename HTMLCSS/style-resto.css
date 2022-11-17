@@ -1,16 +1,81 @@
+/* CONFIGURAÇÕES INICIAIS */
+
+@font-face {
+    font-family: Agency FB;
+    src: url('fonts/agency-fb-2.ttf')
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url('fonts/Poppins/Poppins-Regular.ttf')
+}
+
+@font-face {
+    font-family: CSFont;
+    src: url('fonts/cs_regular.ttf')
+}
+
 html {
-    height: 100%;
     background-color: #212126;
+    font-family: Agency FB;
+}
+
+* {
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* ELEMENTOS HEADER - VERIFICAR RESPONSIVIDADE DE TELA DO HEADER */
+
+.logo-01 {
+    margin-top: 5px;
+    padding: 0 100px;
+}
+
+header {
+    font-style: montserrat;
+    font-size: 30px;
 }
 
 body {
-    background-color: #212126;
-    font-family: Agency FB;
-    margin: 200px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: rgb(45, 48, 51);
+    /* 45, 48, 51 */
+    width: 100%;
+}
+
+nav ul {
+    float: right;
+    margin-right: 25px;
+    height: 100%;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+    line-height: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 4px;
+}
+
+a:hover {
+    transition: .5;
+    background-color: rgb(65, 68, 71);
 }
 
 #imagem-csbrasil-paginas {
-    height: 8%; 
+    height: 8%;
     width: 7.5%;
 }
 

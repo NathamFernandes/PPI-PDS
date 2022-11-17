@@ -20,33 +20,56 @@ html {
     font-family: Agency FB;
 }
 
+* {
+    text-decoration: none;
+    list-style: none;
+}
+
 /* ELEMENTOS HEADER - VERIFICAR RESPONSIVIDADE DE TELA DO HEADER */
 
+.logo-01 {
+    height: 10%;
+    width: 10%;
+    margin-top: 5px;
+    padding: 0 100px;
+}
+
 header {
-    display: flex;
-    justify-content: center;
-    background-image: url(imagens/headercsgo.png);
-    margin: -0.4%;
-    border-bottom: #1E2033 solid 10px;
+    font-style: montserrat;
+    font-size: xx-large;
 }
 
-#imagem-csbrasil-home {
-    height: 16%;
-    width: 16%;
-    transition: all 0.3s;
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#imagem-csbrasil-home:hover {
-    height: 18%;
-    width: 18%;
-    transition: all 0.3s;
+nav {
+    background-color: lightslategrey;
+    width: 100%;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 35px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white
 }
 
 /* -------- */
 
 #all {
-    margin-left: 220px;
-    margin-right: 220px;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 
 #div-times-brasil {
@@ -89,25 +112,25 @@ header {
 }
 
 #div-04 {
-    background-color: aqua; 
+    background-color: aqua;
     padding: 20px;
     text-align: right;
     margin-bottom: 5px;
 }
 
 #p-03 {
-    color: white; 
-    word-break: normal; 
-    font-size: x-large; 
-    text-align: justify; 
+    color: white;
+    word-break: normal;
+    font-size: x-large;
+    text-align: justify;
     margin-right: 300px;
 }
 
 #p-04 {
-    color: white; 
-    word-break: normal; 
-    font-size: x-large; 
-    text-align: justify; 
+    color: white;
+    word-break: normal;
+    font-size: x-large;
+    text-align: justify;
     margin-left: 300px;
 }
 
@@ -123,63 +146,4 @@ header {
     padding: 400px;
 }
 
-.inline-photo {
-    border: 1em solid #fff;
-    border-bottom: 4em solid #fff;
-    border-radius: .25em;
-    box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
-    margin: 2em auto;
-    max-width: 600px;
-    opacity: 0;
-    -webkit-transform: translateY(4em) rotateZ(-5deg);
-            transform: translateY(4em) rotateZ(-5deg);
-    -webkit-transition: opacity .3s .25s ease-out,
-                -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
-    transition: opacity .3s .25s ease-out,
-                -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
-    transition: transform 4s .25s cubic-bezier(0,1,.3,1),
-                opacity .3s .25s ease-out;
-    transition: transform 4s .25s cubic-bezier(0,1,.3,1),
-                opacity .3s .25s ease-out,
-                -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
-    width: 90%;
-  
-    will-change: transform, opacity;
-}
-  
-.inline-photo.is-visible {
-    opacity: 1;
-    -webkit-transform: rotateZ(-2deg);
-    transform: rotateZ(-2deg);
-}
-
-.main-photo {
-    -webkit-transform: scale(.8);
-    transform: scale(.8);
-}
-  
-.heading {
-    -webkit-transform: translate(-50%, calc(-50% + 1em));
-    transform: translate(-50%, calc(-50% + 1em));
-}
-  
-.is-visible .main-photo {
-    -webkit-transform: none;
-    transform: none;
-  }
-  
-.is-visible .heading {
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-  
-.main-photo, .heading {
-    -webkit-transition: -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
-    transition: -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
-    transition: transform 4s .25s cubic-bezier(0,1,.3,1);
-    transition: transform 4s .25s cubic-bezier(0,1,.3,1), -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
-  
-    will-change: transform;
-}
-  
-  
+/* https://www.youtube.com/watch?v=oLgtucwjVII 2:39 */

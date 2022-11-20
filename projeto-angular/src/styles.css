@@ -74,3 +74,59 @@ a:hover {
     transition: .5;
     background-color: rgb(65, 68, 71);
 }
+
+.checkbtn {
+    float: right;
+    padding-right: 18px;
+    padding-top: 18px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+/* MEDIA HEDAER (POR ENQUANTO) */
+
+@media (max-width: 1140px) {
+    nav ul li a {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 1070px) {
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #384653;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover {
+        background: none;
+        color: #0082e6;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+}

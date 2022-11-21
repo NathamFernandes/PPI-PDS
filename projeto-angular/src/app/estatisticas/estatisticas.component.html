@@ -24,4 +24,22 @@
     </nav>
 </header>
 
+<!-- feito de noite -->
+
+<body>
+    <div>
+        <label for="iduser">ID do usuário:</label>
+        <input id="iduser" name="iduser" type="number" #iduser>
+    </div>
+    <input type="button" value="Procurar" (click)="exibirDadosUser(iduser)">
+</body>
+
+<div *ngFor="let stat of statsUser">
+    <p>ID: {{stat.steamID}}</p>
+    <p>Kills: {{stat.total_kills}}</p>
+    <p>AK47: {{stat.total_kills_ak47}}</p>
+</div>
+
 </html>
+
+<!-- feito de noite -->

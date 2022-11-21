@@ -22,6 +22,7 @@ export class EstatisticasComponent implements OnInit {
     this.ds.obterStatsUser(+iduser.value).subscribe(res => {
       this.statsUser = new Array(res)
     })
+    console.log(this.statsUser)
   }
 
 }

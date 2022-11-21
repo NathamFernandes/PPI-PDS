@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApisteamService {
-
+  
   constructor(private http: HttpClient) { }
 
   obterStatsUser(iduser: number) : Observable<any> {

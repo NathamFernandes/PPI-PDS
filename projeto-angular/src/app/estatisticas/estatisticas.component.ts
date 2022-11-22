@@ -18,6 +18,7 @@ export class EstatisticasComponent implements OnInit {
   ngOnInit(): void {
   }
   // feito de noite 
+  
   exibirDadosUser(iduser: HTMLInputElement): void {
     this.ss.obterStatsUser(+iduser.value).subscribe(res => {
       this.listaJogador = new Array(res)

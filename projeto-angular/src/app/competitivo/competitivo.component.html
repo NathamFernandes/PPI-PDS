@@ -24,8 +24,7 @@
     </nav>
 </header>
 <body>
-    <!--
-    <div style="color: white" *ngFor="let player of listaCompPlayer">
+    <div style="color: white; padding-bottom: 200px;" *ngFor="let player of listaCompPlayer | slice:0:30; let i=index">
         <h2>ID: {{ player.id }}</h2>
         <p>Team: {{ player.team }}</p>
         <p>Nickname: {{ player.nickname }}</p>
@@ -33,12 +32,25 @@
         <p>KD: {{ player.kd }}</p>
         <p>Rating: {{ player.rating }}</p>
     </div>
-    -->
-    <div style="color: white" *ngFor="let toptimes of listaTopTimes">
+
+    <div style="color: white; padding-bottom: 200px;">
+        <label for="idplayer" style="color: white">ID do usuário:</label>
+        <input id="idplayer" name="idplayer" type="number" #idplayer>
+    </div>
+    <input type="button" value="Procurar" (click)="exibirDadosJogadorID(idplayer)">
+
+    <div *ngFor="let jogadorid of listaJogadorID">
+        <h2>ID: {{jogadorid.id}}</h2>
+        <p>Kills: {{jogadorid.nickname }} </p>
+        <p></p>
+    </div>
+
+    <div style="color: white; padding-bottom: 200px;" *ngFor="let toptimes of listaTopTimes">
         <h2>ID: {{ toptimes.name }}</h2>
     </div>
+
+
+    
 </body>
-
-
 
 </html>

@@ -24,4 +24,9 @@ export class ApihltvService {
     return this.http.get(URL)
   }
 
+  obterJogadorPeloID(idplayer: number) : Observable<any> {
+    let URL = `https://api-hltv-natham.herokuapp.com/jogadores/${idplayer}`
+    return this.http.get(URL)
+  }
+
 }

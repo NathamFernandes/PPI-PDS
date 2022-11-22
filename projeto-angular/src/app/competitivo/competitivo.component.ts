@@ -11,10 +11,12 @@ import { Component, OnInit } from '@angular/core';
 export class CompetitivoComponent implements OnInit {
   listaCompPlayer: CompPlayer[];
   listaTopTimes: TopTimes[];
+  listaJogadorID: CompPlayer[];
 
   constructor(private hs: ApihltvService) {
     this.listaCompPlayer = [];
     this.listaTopTimes = [];
+    this.listaJogadorID = [];
   }
 
   ngOnInit(): void {
@@ -26,4 +28,9 @@ export class CompetitivoComponent implements OnInit {
     })
   }
 
+  exibirDadosJogadorID(idplayer: HTMLInputElement): void {
+    this.hs.obterJogadorPeloID(+idplayer.value).subscribe(res => {
+      this.listaJogadorID = new Array(res)
+    })
+  }
 }

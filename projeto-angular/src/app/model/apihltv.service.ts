@@ -10,7 +10,7 @@ export class ApihltvService {
   constructor(private http: HttpClient) { }
 
   obterCompJogadores(): Observable<any> {
-    let URL = 'https://localhost:3000/jogadores';
+    let URL = '';
     return this.http.get(URL);
   }
 

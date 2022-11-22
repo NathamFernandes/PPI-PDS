@@ -22,7 +22,7 @@ export class EstatisticasComponent implements OnInit {
     this.ss.obterStatsUser(+iduser.value).subscribe(res => {
       this.listaJogador = new Array(res)
     })
-    console.log(this.listaJogador)
+    console.log(this.ss.obterStatsUser(+iduser.value))
   }
 
 }

@@ -24,11 +24,18 @@
     </nav>
 </header>
 <body>
-    <div *ngFor="let player of listaCompPlayer">
-        <p>{{ listaCompPlayer }}</p>
-        <h2>ID: {{player.id}}</h2>
-        <p>Team: {{player.team}}</p>
-        <p>Nickname: {{player.nickname}}</p>
+    <!--
+    <div style="color: white" *ngFor="let player of listaCompPlayer">
+        <h2>ID: {{ player.id }}</h2>
+        <p>Team: {{ player.team }}</p>
+        <p>Nickname: {{ player.nickname }}</p>
+        <p>Mapas jogados: {{ player.mapsPlayed }}</p>
+        <p>KD: {{ player.kd }}</p>
+        <p>Rating: {{ player.rating }}</p>
+    </div>
+    -->
+    <div style="color: white" *ngFor="let toptimes of listaTopTimes">
+        <h2>ID: {{ toptimes.name }}</h2>
     </div>
 </body>
 

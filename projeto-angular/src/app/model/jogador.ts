@@ -1,5 +1,6 @@
 export class Jogador {
     steamID: number = 0;
+    game: string = '';
     total_kills: number = 0;
     total_deaths: number = 0;
     total_time_played: number = 0;

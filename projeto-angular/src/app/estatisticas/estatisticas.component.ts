@@ -8,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./estatisticas.component.css']
 })
 export class EstatisticasComponent implements OnInit {
-  listaJogador: Jogador[];
+  listaJogador: any;
 
   constructor(private ss: ApisteamService) {
-    this.listaJogador = [];
+    this.listaJogador = {};
   }
   
 
@@ -21,7 +21,7 @@ export class EstatisticasComponent implements OnInit {
   
   exibirDadosUser(iduser: HTMLInputElement): void {
     this.ss.obterStatsUser(+iduser.value).subscribe(res => {
-      this.listaJogador = new Array(res)
+      this.listaJogador = res
     })
     console.log(this.ss.obterStatsUser(+iduser.value))
   }

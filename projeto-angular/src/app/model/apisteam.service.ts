@@ -10,7 +10,7 @@ export class ApisteamService {
   constructor(private http: HttpClient) { }
 
   obterStatsUser(iduser: number) : Observable<any> {
-    let URL = `http://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002/?appid=730&key=E9FCC1C5E3BA8368FDABE96C4027CA8D&steamid=${iduser}`
+    let URL = `https://api-steam-natham.herokuapp.com/usuarios/${iduser}`
     return this.http.get(URL)
   }
   

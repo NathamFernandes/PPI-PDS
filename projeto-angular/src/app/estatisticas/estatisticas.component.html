@@ -34,7 +34,7 @@
     <input type="button" value="Procurar" (click)="exibirDadosUser(iduser)">
 </body>
 
-<div *ngFor="let stat of statsUser">
+<div *ngFor="let stat of listaJogador">
     <h2>ID: {{stat}}</h2>
     <p>Kills: {{stat.total_kills}}</p>
     <p>AK47: {{stat.total_kills_ak47}}</p>

@@ -23,5 +23,15 @@
         </ul>
     </nav>
 </header>
+<body>
+    <div *ngFor="let player of listaCompPlayer">
+        <p>{{ listaCompPlayer }}</p>
+        <h2>ID: {{player.id}}</h2>
+        <p>Team: {{player.team}}</p>
+        <p>Nickname: {{player.nickname}}</p>
+    </div>
+</body>
+
+
 
 </html>

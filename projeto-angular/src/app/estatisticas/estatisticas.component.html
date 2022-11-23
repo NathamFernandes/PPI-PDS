@@ -34,12 +34,17 @@
     <input type="button" value="Procurar" (click)="exibirDadosUser(iduser)">
 </body>
 
-<div style="color: white" *ngFor="let play of listaJogador">
+<div style="color: white">
 
-    <h2>Kills: {{ play.steamID }}</h2>
-    <h2>Deaths: {{ play.game }}</h2>
-
-    <h2>Deaths: {{ play.stats }}</h2>
+    <h2>GameID: {{ listaJogador['gameID'] }} lol</h2>
+    <h2>Game: {{ listaJogador['game'] }}</h2>
+    <h2>Kills: {{ listaJogador['stats']['total_kills'] }}</h2>
+    <h2>Deaths: {{ listaJogador['stats']['total_deaths'] }} </h2>
+    <h2>Time Played: {{ listaJogador['stats']['total_time_played'] }} </h2>
+    <h2>Wins: {{ listaJogador['stats']['total_wins'] }} </h2>
+    <h2>Kills AWP: {{ listaJogador['stats']['total_kills_awp'] }} </h2>
+    <h2>Kills AK47: {{ listaJogador['stats']['total_kills_ak47'] }} </h2>
+    <h2>Kills M4: {{ listaJogador['stats']['total_kills_m4a1'] }} </h2>
 </div>
 
 </html>

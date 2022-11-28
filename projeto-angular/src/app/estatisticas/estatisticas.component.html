@@ -36,8 +36,10 @@
 
 <div style="color: white">
     <h2>GameID: {{ listaJogador.playerstats.steamID }}</h2>
-    <h2>GameID: {{ listaJogador.playerstats.gameName }}</h2>
-    <h2>GameID: {{ estates.name }}</h2>
+    <h2>Nome do jogo: {{ listaJogador.playerstats.gameName }}</h2>
+    <h2>Total de kills: {{ listaJogador.playerstats.stats[0]['value'] }}</h2>
+    <h2>Total de mortes: {{ listaJogador.playerstats.stats[1]['value'] }}</h2>
+    <h2>Total de vitórias: {{ listaJogador.playerstats.stats[6]['value'] }}</h2>
 </div>
 
 </html>

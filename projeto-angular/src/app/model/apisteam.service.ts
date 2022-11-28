@@ -15,10 +15,5 @@ export class ApisteamService {
     return this.http.get(URL)
   }
   
-  obterStatsAmigo(idamigo1: string, idamigo2: string) : Observable<any> {
-    let URL_1 = `https://api-steam-natham.herokuapp.com/usuarios/${idamigo1}`
-    let URL_2 = `https://api-steam-natham.herokuapp.com/usuarios/${idamigo2}`
-    return this.http.get(URL_1), this.http.get(URL_2)
-  } 
 
 }

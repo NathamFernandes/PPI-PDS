@@ -27,20 +27,82 @@
 <!-- feito de noite -->
 
 <body>
+
+    <div>
+        <label for="idamigo1" style="color: white">ID do amigo 1:</label>
+        <input id="idamigo1" name="idamigo1" type="string" #idamigo1>
+    </div>
+
+    <div>
+        <label for="idamigo2" style="color: white">ID do amigo 2:</label>
+        <input id="idamigo2" name="idamigo2" type="string" #idamigo2>
+    </div>
+
+    <input type="button" value="Comparar" (click)="compararDadosAmigos(idamigo1, idamigo2)">
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div style="color: white; display:inline-block">
+        <h1>AMIGO 1</h1>
+        <h2>ID da STEAM: {{ listaAmigoUm.playerstats.steamID }}</h2>
+        <h2>Total de kills: {{ listaCoisasUm.total_kills }}</h2>
+        <h2>Total de mortes: {{ listaCoisasUm.total_deaths }}</h2>
+        <h2>Total de rounds ganhos: {{ listaCoisasUm.total_wins }}</h2>
+        <h2>Total de kills com Deagle: {{ listaCoisasUm.total_kills_deagle }}</h2>
+        <h2>Total de kills com AWP: {{ listaCoisasUm.total_kills_awp }}</h2>
+        <h2>Total de kills com AK: {{ listaCoisasUm.total_kills_ak47 }}</h2>
+        <h2>Total de kills com M4: {{ listaCoisasUm.total_kills_m4a1 }}</h2>
+        <h2>Total de kills de HS: {{ listaCoisasUm.total_kills_headshot }}</h2>
+        <h2>Total de kills com inimigo cegado: {{ listaCoisasUm.total_kills_enemy_blinded }}</h2>
+    </div>
+
+    <div style="color: white; float: right">
+        <h1>AMIGO 2</h1>
+        <h2>ID da STEAM: {{ listaAmigoDois.playerstats.steamID }}</h2>
+        <h2>Total de kills: {{ listaCoisasDois.total_kills }}</h2>
+        <h2>Total de mortes: {{ listaCoisasDois.total_deaths }}</h2>
+        <h2>Total de rounds ganhos: {{ listaCoisasDois.total_wins }}</h2>
+        <h2>Total de kills com Deagle: {{ listaCoisasDois.total_kills_deagle }}</h2>
+        <h2>Total de kills com AWP: {{ listaCoisasDois.total_kills_awp }}</h2>
+        <h2>Total de kills com AK: {{ listaCoisasDois.total_kills_ak47 }}</h2>
+        <h2>Total de kills com M4: {{ listaCoisasDois.total_kills_m4a1 }}</h2>
+        <h2>Total de kills de HS: {{ listaCoisasDois.total_kills_headshot }}</h2>
+        <h2>Total de kills com inimigo cegado: {{ listaCoisasDois.total_kills_enemy_blinded }}</h2>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
     <div>
         <label for="iduser" style="color: white">ID do usuário:</label>
         <input id="iduser" name="iduser" type="string" #iduser>
     </div>
     <input type="button" value="Procurar" (click)="exibirDadosUser(iduser)">
+
+    <div style="color: white">
+        <h2>ID da STEAM: {{ listaJogador.playerstats.steamID }}</h2>
+        <h2>Total de kills: {{ listaCoisas.total_kills }}</h2>
+        <h2>Total de mortes: {{ listaCoisas.total_deaths }}</h2>
+        <h2>Total de rounds ganhos: {{ listaCoisas.total_wins }}</h2>
+        <h2>Total de kills com Deagle: {{ listaCoisas.total_kills_deagle }}</h2>
+        <h2>Total de kills com AWP: {{ listaCoisas.total_kills_awp }}</h2>
+        <h2>Total de kills com AK: {{ listaCoisas.total_kills_ak47 }}</h2>
+        <h2>Total de kills com M4: {{ listaCoisas.total_kills_m4a1 }}</h2>
+        <h2>Total de kills de HS: {{ listaCoisas.total_kills_headshot }}</h2>
+        <h2>Total de kills com inimigo cegado: {{ listaCoisas.total_kills_enemy_blinded }}</h2>
+    </div>
+
+    <!-- EXIBE STATS AMIGOS -->
+
+
 </body>
 
-<div style="color: white">
-    <h2>GameID: {{ listaJogador.playerstats.steamID }}</h2>
-    <h2>Nome do jogo: {{ listaJogador.playerstats.gameName }}</h2>
-    <h2>Total de kills: {{ listaJogador.playerstats.stats[0]['value'] }}</h2>
-    <h2>Total de mortes: {{ listaJogador.playerstats.stats[1]['value'] }}</h2>
-    <h2>Total de vitórias: {{ listaJogador.playerstats.stats[6]['value'] }}</h2>
-</div>
+
 
 </html>
 

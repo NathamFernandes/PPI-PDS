@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
+import { catchError, retry } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class ApisteamService {
   constructor(private http: HttpClient) { }
 
   obterStatsUser(iduser: number) : Observable<any> {
-    let URL = `localhost:3000/usuarios/${iduser}`
+    let URL = `http://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002/?appid=730&key=E9FCC1C5E3BA8368FDABE96C4027CA8D&steamid=${iduser}`
     return this.http.get(URL)
   }
   

@@ -8,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./estatisticas.component.css']
 })
 export class EstatisticasComponent implements OnInit {
-  listaJogador: Jogador;
+  listaJogador: any;
 
 
   constructor(private ss: ApisteamService) {
-    this.listaJogador = new Jogador;
+    this.listaJogador = [];
   }
   
 

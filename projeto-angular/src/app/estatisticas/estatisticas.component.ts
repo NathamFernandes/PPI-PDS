@@ -1,3 +1,4 @@
+import { PlayerStats } from './../model/playerstats';
 import { Jogador } from './../model/jogador';
 import { ApisteamService } from './../model/apisteam.service';
 import { Component, OnInit } from '@angular/core';
@@ -8,11 +9,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./estatisticas.component.css']
 })
 export class EstatisticasComponent implements OnInit {
-  listaJogador: any;
+  listaJogador: Jogador;
 
 
   constructor(private ss: ApisteamService) {
-    this.listaJogador = [];
+    this.listaJogador = new Jogador;
   }
   
 
@@ -21,7 +22,7 @@ export class EstatisticasComponent implements OnInit {
   // feito de noite 
   
   exibirDadosUser(iduser: HTMLInputElement): void {
-    this.ss.obterStatsUser(+iduser.value).subscribe(res => {
+    this.ss.obterStatsUser(iduser.value).subscribe(res => {
       this.listaJogador = res
     })
     console.log(this.listaJogador)

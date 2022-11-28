@@ -1,6 +1,4 @@
-import { Stats } from './stats';
+import { PlayerStats } from "./playerstats";
 export class Jogador {
-    steamID: string = '';
-    game: string = '';
-    stats: Stats[] = [];
+    playerstats: PlayerStats = new PlayerStats;
 }

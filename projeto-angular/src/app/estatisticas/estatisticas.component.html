@@ -29,7 +29,7 @@
 <body>
     <div>
         <label for="iduser" style="color: white">ID do usuário:</label>
-        <input id="iduser" name="iduser" type="number" #iduser>
+        <input id="iduser" name="iduser" type="string" #iduser>
     </div>
     <input type="button" value="Procurar" (click)="exibirDadosUser(iduser)">
 </body>
@@ -37,7 +37,7 @@
 <div style="color: white">
     <h2>GameID: {{ listaJogador.playerstats.steamID }}</h2>
     <h2>GameID: {{ listaJogador.playerstats.gameName }}</h2>
-    <h2>GameID: {{ listaJogador.playerstats.stats[0] }}</h2>
+    <h2>GameID: {{ estates.name }}</h2>
 </div>
 
 </html>

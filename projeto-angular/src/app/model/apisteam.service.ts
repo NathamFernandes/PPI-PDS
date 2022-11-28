@@ -11,13 +11,14 @@ export class ApisteamService {
   constructor(private http: HttpClient) { }
 
   obterStatsUser(iduser: string) : Observable<any> {
-    let URL = `http://localhost:3000/usuarios/${iduser}`
+    let URL = `https://api-steam-natham.herokuapp.com/usuarios/${iduser}`
     return this.http.get(URL)
   }
   
-  obterStatsAmigo(iduser: number, idamigo: number) : Observable<any> {
-    let URL_2 = `http://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002/?appid=730&key=E9FCC1C5E3BA8368FDABE96C4027CA8D&steamid=${idamigo}`
-    return this.http.get(URL_2)
+  obterStatsAmigo(idamigo1: string, idamigo2: string) : Observable<any> {
+    let URL_1 = `https://api-steam-natham.herokuapp.com/usuarios/${idamigo1}`
+    let URL_2 = `https://api-steam-natham.herokuapp.com/usuarios/${idamigo2}`
+    return this.http.get(URL_1), this.http.get(URL_2)
   } 
 
 }

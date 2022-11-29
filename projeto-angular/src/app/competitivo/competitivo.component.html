@@ -24,7 +24,8 @@
     </nav>
 </header>
 <body>
-    <div style="color: white; padding-bottom: 200px;" *ngFor="let player of listaCompPlayer | slice:0:30; let i=index">
+    <!-- LISTA DE 30 MELHORES JOGADORES -->
+    <div style="color: white; padding-bottom: 50px;" *ngFor="let player of listaJogadores | slice:0:30; let i=index">
         <h2>ID: {{ player.id }}</h2>
         <p>Team: {{ player.team }}</p>
         <p>Nickname: {{ player.nickname }}</p>
@@ -33,22 +34,34 @@
         <p>Rating: {{ player.rating }}</p>
     </div>
 
-    <div style="color: white; padding-bottom: 200px;">
+    <!-- LISTA DE 30 MELHORES TIMES -->
+    <div style="color: white; padding-bottom: 30px;" *ngFor="let team of listaTimes">
+        <h2>ID: {{ team.name }}</h2>
+    </div>
+
+    <!-- OBJETO COM JOGADOR PELO ID -->
+    <div style="color: white;">
         <label for="idplayer" style="color: white">ID do usuário:</label>
         <input id="idplayer" name="idplayer" type="number" #idplayer>
     </div>
     <input type="button" value="Procurar" (click)="exibirDadosJogadorID(idplayer)">
 
-    <div *ngFor="let jogadorid of listaJogadorID">
-        <h2>ID: {{jogadorid.id}}</h2>
-        <p>Kills: {{jogadorid.nickname }} </p>
-        <p></p>
+    <div style="color: white;"  >
+        <h2>ID: {{JogadorID.id}}</h2>
+        <p>Kills: {{JogadorID.nickname }} </p>
+        <p>Kills: {{JogadorID.kd }} </p>
     </div>
 
-    <div style="color: white; padding-bottom: 200px;" *ngFor="let toptimes of listaTopTimes">
-        <h2>ID: {{ toptimes.name }}</h2>
+    <!-- OBJETO COM TIME PELO ID -->
+    <div style="color: white; padding-bottom: 200px;">
+        <label for="idteam" style="color: white">ID do usuário:</label>
+        <input id="idteam" name="idteam" type="number" #idteam>
     </div>
+    <input type="button" value="Procurar" (click)="exibirDadosTimeID(idteam)">
 
+    <div style="color: white; padding-bottom: 200px;">
+        <h2>ID: {{ TimeID.name }}</h2>
+    </div>
 
     
 </body>

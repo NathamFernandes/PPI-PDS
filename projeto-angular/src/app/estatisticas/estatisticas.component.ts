@@ -44,11 +44,9 @@ export class EstatisticasComponent implements OnInit {
     this.ss.obterStatsUser(iduser.value).subscribe(res => {
       this.listaJogador = res
       this.estatesJogador = this.listaJogador.playerstats.stats
-      for (let i = 0; i < 14; i ++) {
-        let variavel = this.estatesJogador.find((x: Stats) => x.name === this.listaPegar[i]).value
-        this.listaCoisas[this.listaPegar[i]] = variavel
-      } 
-      console.log(this.listaCoisas)
+      let nome = this.estatesJogador
+      let coisa = this.listaCoisas
+      this.appendaObjeto(nome, coisa)
     })
 
   }
@@ -56,31 +54,68 @@ export class EstatisticasComponent implements OnInit {
     this.ss.obterStatsUser(idamigo1.value).subscribe(res => {
       this.listaAmigoUm = res
       this.estatesAmigoUm = this.listaAmigoUm.playerstats.stats
-      for (let i = 0; i < 14; i ++) {
-        let variavel = this.estatesAmigoUm.find((x: Stats) => x.name === this.listaPegar[i]).value
-        this.listaCoisasUm[this.listaPegar[i]] = variavel
-      } 
-
-      console.log(this.listaCoisasUm)
+      let nome = this.estatesAmigoUm
+      let coisa = this.listaCoisasUm
+      this.appendaObjeto(nome, coisa)
     })
     this.ss.obterStatsUser(idamigo2.value).subscribe(res => {
       this.listaAmigoDois = res
       this.estatesAmigoDois = this.listaAmigoDois.playerstats.stats
-      for (let i = 0; i < 14; i ++) {
-        let variavel = this.estatesAmigoDois.find((x: Stats) => x.name === this.listaPegar[i]).value
-        this.listaCoisasDois[this.listaPegar[i]] = variavel
-      } 
-
-      console.log(this.listaCoisasDois)
+      let nome = this.estatesAmigoDois
+      let coisa = this.listaCoisasDois
+      this.appendaObjeto(nome, coisa)
     })
   }
-}
 
-/* console.log(this.listaJogador)
-      console.log(this.listaJogador.playerstats)
-      this.estates = this.listaJogador.playerstats.stats
-      console.log(this.estates)
-      var result1 = this.estates.filter(obj => {
-        return obj.name === 'total_kills'
-      })
-    }) */
+  // Faz  tudo: reutilização de código
+
+  appendaObjeto(nome: any, coisa: StatsReais) {
+    for (let i = 0; i < 14; i++) {
+      let variavel = nome.find((x: Stats) => x.name === this.listaPegar[i]).value
+      coisa[this.listaPegar[i]] = variavel
+    }
+    coisa['kd'] = this.calculaKD(nome)
+    coisa['mapa_preferido'] = this.calculaMapa(nome)
+  }
+
+  // Calcula o KD: função 
+
+  calculaKD(nome: any) {
+    let kills = nome.find((x: Stats) => x.name === 'total_kills').value
+    let deaths = nome.find((x: Stats) => x.name === 'total_deaths').value
+    let result = kills / deaths
+    let kd = result.toFixed(2)
+    return kd
+  }
+
+  calculaMapa(nome: any) {
+    let vertigo = nome.find((x: Stats) => x.name === 'total_rounds_map_de_vertigo').value
+    let inferno = nome.find((x: Stats) => x.name === 'total_rounds_map_de_inferno').value
+    let dust2 = nome.find((x: Stats) => x.name === 'total_rounds_map_de_dust2').value
+    let train = nome.find((x: Stats) => x.name === 'total_rounds_map_de_train').value
+    let nuke = nome.find((x: Stats) => x.name === 'total_rounds_map_de_nuke').value
+    let array = [vertigo, inferno, dust2, train, nuke]
+    let arraymax = Math.max(...array)
+    let num = array.indexOf(arraymax)
+    if (num == 0) {
+      let map = 'Vertigo'
+      return map
+    } else if (num == 1) {
+      let map = 'Inferno'
+      return map
+    } else if (num == 2) {
+      let map = 'Dust2'
+      return map
+    } else if (num == 3) {
+      let map = 'Train'
+      return map
+    } else if (num == 4) {
+      let map = 'Nuke'
+      return map
+    } else {
+      let map = 'Nenhum'
+      return map
+    }
+  }
+
+}

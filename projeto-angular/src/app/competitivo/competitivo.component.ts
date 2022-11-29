@@ -9,28 +9,36 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./competitivo.component.css']
 })
 export class CompetitivoComponent implements OnInit {
-  listaCompPlayer: CompPlayer[];
-  listaTopTimes: TopTimes[];
-  listaJogadorID: CompPlayer[];
+  listaJogadores: CompPlayer[];
+  listaTimes: TopTimes[];
+  JogadorID: CompPlayer;
+  TimeID: TopTimes;
 
   constructor(private hs: ApihltvService) {
-    this.listaCompPlayer = [];
-    this.listaTopTimes = [];
-    this.listaJogadorID = [];
+    this.listaJogadores = [];
+    this.listaTimes = [];
+    this.JogadorID = new CompPlayer;
+    this.TimeID = new TopTimes;
   }
 
   ngOnInit(): void {
-    this.hs.obterCompJogadores().subscribe(res => {
-      this.listaCompPlayer = res
+    this.hs.obterDadosJogadores().subscribe(res => {
+      this.listaJogadores = res
     })
-    this.hs.obterDadosTopTimes().subscribe(res => {
-      this.listaTopTimes = res
+    this.hs.obterDadosTimes().subscribe(res => {
+      this.listaTimes = res
     })
   }
 
   exibirDadosJogadorID(idplayer: HTMLInputElement): void {
     this.hs.obterJogadorPeloID(+idplayer.value).subscribe(res => {
-      this.listaJogadorID = new Array(res)
+      this.JogadorID = res
+    })
+  }
+
+  exibirDadosTimeID(idteam: HTMLInputElement): void {
+    this.hs.obterJogadorPeloID(+idteam.value).subscribe(res => {
+      this.JogadorID = res
     })
   }
 }

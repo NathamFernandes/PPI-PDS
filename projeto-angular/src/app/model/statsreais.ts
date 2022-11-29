@@ -14,4 +14,8 @@ export class StatsReais {
     total_rounds_map_de_dust2: number = 0;
     total_rounds_map_de_train: number = 0;
     total_rounds_map_de_nuke: number = 0;
+
+    // toFixed converte para String
+    kd: string = '';
+    mapa_preferido: string = '';
 }

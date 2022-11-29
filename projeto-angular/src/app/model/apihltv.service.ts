@@ -9,7 +9,7 @@ export class ApihltvService {
 
   constructor(private http: HttpClient) { }
 
-  obterCompJogadores(): Observable<any> {
+  obterDadosJogadores(): Observable<any> {
     let URL = 'https://api-hltv-natham.herokuapp.com/jogadores';
     return this.http.get(URL);
   }
@@ -19,13 +19,18 @@ export class ApihltvService {
     return this.http.get(URL)
   }
 
-  obterDadosTopTimes(): Observable<any> {
+  obterDadosTimes(): Observable<any> {
     let URL = 'https://api-hltv-natham.herokuapp.com/top-times'
     return this.http.get(URL)
   }
 
   obterJogadorPeloID(idplayer: number) : Observable<any> {
     let URL = `https://api-hltv-natham.herokuapp.com/jogadores/${idplayer}`
+    return this.http.get(URL)
+  }
+
+  obterTimePeloID(idteam: number) : Observable<any> {
+    let URL = `https://api-hltv-natham.herokuapp.com/times/${idteam}`
     return this.http.get(URL)
   }
 

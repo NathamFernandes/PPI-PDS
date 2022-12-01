@@ -66,6 +66,7 @@ Alguns dos objetivos a serem cumpridos em relação à aplicação.
 
 - Planejamento do design da página
 - Escolher estatísticas apresentadas
+- Validators
 - Incluir times brasileiros
 - Mostrar foto do time e jogador
     - *Perfil da steam (?)*
@@ -73,8 +74,9 @@ Alguns dos objetivos a serem cumpridos em relação à aplicação.
 ### Estatísticas 
 
 - Planejamento do design da página
-- Mostrar foto de perfil do jogador
-- Mostrar perfil da steam do jogador
+- <s>Mostrar foto de perfil do jogador</s>
+- Validators
+- <s>Mostrar perfil da steam do jogador</s>
 
 ### Comunidade
 

@@ -27,7 +27,7 @@
 <!-- feito de noite -->
 
 <body>
-
+    <h1 style="color: white">COMPARA PLAYERS</h1>
     <div>
         <label for="idamigo1" style="color: white">ID do amigo 1:</label>
         <input id="idamigo1" name="idamigo1" type="string" #idamigo1>
@@ -48,7 +48,10 @@
     <br>
     <div style="color: white; display:inline-block">
         <h1>AMIGO 1</h1>
+        <h2><img [src]="sumarioAmigoUm.avatar['large']"></h2>
+        <h2>Nickname: {{ sumarioAmigoUm.nickname }}</h2>
         <h2>ID da STEAM: {{ listaAmigoUm.playerstats.steamID }}</h2>
+        <h2>Perfil da Steam: <a [href]="sumarioAmigoUm.url">{{ sumarioAmigoUm.url }}</a></h2>
         <h2>Total de kills: {{ listaCoisasUm.total_kills }}</h2>
         <h2>Total de mortes: {{ listaCoisasUm.total_deaths }}</h2>
         <h2>Total de rounds ganhos: {{ listaCoisasUm.total_wins }}</h2>
@@ -64,7 +67,10 @@
 
     <div style="color: white; float: right">
         <h1>AMIGO 2</h1>
+        <h2><img [src]="sumarioAmigoDois.avatar['large']"></h2>
+        <h2>Nickname: {{ sumarioAmigoDois.nickname }}</h2>
         <h2>ID da STEAM: {{ listaAmigoDois.playerstats.steamID }}</h2>
+        <h2>Perfil da Steam: <a [href]="sumarioAmigoDois.url">{{ sumarioAmigoDois.url }}</a></h2>
         <h2>Total de kills: {{ listaCoisasDois.total_kills }}</h2>
         <h2>Total de mortes: {{ listaCoisasDois.total_deaths }}</h2>
         <h2>Total de rounds ganhos: {{ listaCoisasDois.total_wins }}</h2>
@@ -82,6 +88,11 @@
     <br>
     <br>
     <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 style="color: white">MOSTRA STATS</h1>
     <div>
         <label for="iduser" style="color: white">ID do usuário:</label>
         <input id="iduser" name="iduser" type="string" #iduser>
@@ -89,7 +100,10 @@
     <input type="button" value="Procurar" (click)="exibirDadosUser(iduser)">
 
     <div style="color: white">
+        <h2><img [src]="sumarioUsuario.avatar['large']"></h2>
+        <h2>Nickname: {{ sumarioUsuario.nickname }}</h2>
         <h2>ID da STEAM: {{ listaJogador.playerstats.steamID }}</h2>
+        <h2>Perfil da Steam: <a [href]="sumarioUsuario.url">{{ sumarioUsuario.url }}</a></h2>
         <h2>Total de kills: {{ listaCoisas.total_kills }}</h2>
         <h2>Total de mortes: {{ listaCoisas.total_deaths }}</h2>
         <h2>Total de rounds ganhos: {{ listaCoisas.total_wins }}</h2>

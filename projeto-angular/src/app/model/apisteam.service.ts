@@ -14,6 +14,10 @@ export class ApisteamService {
     let URL = `https://api-steam-natham.herokuapp.com/usuarios/${iduser}`
     return this.http.get(URL)
   }
-  
+
+  obterSumario(iduser: string) : Observable<any> {
+    let URL_2 = `https://api-steam-natham.herokuapp.com/sumario/${iduser}`
+    return this.http.get(URL_2)
+  }
 
 }

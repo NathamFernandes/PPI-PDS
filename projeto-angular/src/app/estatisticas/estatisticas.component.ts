@@ -1,3 +1,4 @@
+import { Sumario } from './../model/sumario';
 import { StatsReais } from './../model/statsreais';
 import { Stats } from './../model/stats';
 import { PlayerStats } from './../model/playerstats';
@@ -22,6 +23,9 @@ export class EstatisticasComponent implements OnInit {
   listaCoisas: StatsReais;
   listaCoisasUm: StatsReais;
   listaCoisasDois: StatsReais;
+  sumarioUsuario: Sumario;
+  sumarioAmigoUm: Sumario;
+  sumarioAmigoDois: Sumario;
 
   constructor(private ss: ApisteamService) {
     this.listaJogador = new Jogador;
@@ -34,6 +38,9 @@ export class EstatisticasComponent implements OnInit {
     this.listaCoisas = new StatsReais;
     this.listaCoisasUm = new StatsReais;
     this.listaCoisasDois = new StatsReais;
+    this.sumarioUsuario = new Sumario;
+    this.sumarioAmigoUm = new Sumario;
+    this.sumarioAmigoDois= new Sumario;
   }
 
 
@@ -48,6 +55,10 @@ export class EstatisticasComponent implements OnInit {
       let coisa = this.listaCoisas
       this.appendaObjeto(nome, coisa)
     })
+    this.ss.obterSumario(iduser.value).subscribe(res => {
+      this.sumarioUsuario = res
+      console.log(this.sumarioUsuario)
+    })
 
   }
   compararDadosAmigos(idamigo1: HTMLInputElement, idamigo2: HTMLInputElement): void {
@@ -58,6 +69,10 @@ export class EstatisticasComponent implements OnInit {
       let coisa = this.listaCoisasUm
       this.appendaObjeto(nome, coisa)
     })
+    this.ss.obterSumario(idamigo1.value).subscribe(res => {
+      this.sumarioAmigoUm = res
+      console.log(this.sumarioAmigoUm)
+    })
     this.ss.obterStatsUser(idamigo2.value).subscribe(res => {
       this.listaAmigoDois = res
       this.estatesAmigoDois = this.listaAmigoDois.playerstats.stats
@@ -65,9 +80,13 @@ export class EstatisticasComponent implements OnInit {
       let coisa = this.listaCoisasDois
       this.appendaObjeto(nome, coisa)
     })
+    this.ss.obterSumario(idamigo2.value).subscribe(res => {
+      this.sumarioAmigoDois = res
+      console.log(this.sumarioAmigoDois)
+    })
   }
 
-  // Faz  tudo: reutilização de código
+  // Funções chamáveis para encurtamento de código
 
   appendaObjeto(nome: any, coisa: StatsReais) {
     for (let i = 0; i < 14; i++) {
@@ -77,8 +96,6 @@ export class EstatisticasComponent implements OnInit {
     coisa['kd'] = this.calculaKD(nome)
     coisa['mapa_preferido'] = this.calculaMapa(nome)
   }
-
-  // Calcula o KD: função 
 
   calculaKD(nome: any) {
     let kills = nome.find((x: Stats) => x.name === 'total_kills').value
@@ -117,5 +134,4 @@ export class EstatisticasComponent implements OnInit {
       return map
     }
   }
-
 }

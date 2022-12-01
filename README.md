@@ -43,14 +43,14 @@ O site segue o seguinte esquema:
 
 O projeto está sendo realizado através do framework Angular, em sua versão 14. Para esse projeto, também foram utilizadas APIs para demonstração de informações. A primeira delas, implementada através da biblioteca Node.js [hltv-api](https://www.npmjs.com/package/hltv-api), possui inúmeras versatilidades e é baseada no site de dados estatísticos de CS:GO, a [HLTV](https://www.hltv.org/).
 
-A segunda delas, é a API da steam criada pelo discente, a qual se conecta à API fornecida pela steam e extrai apenas informações do CS:GO. O motivo pela utilização de uma API que pega as informações de outra API está relacionado ao bloqueio do CORS, não implementado na API original. Por essa razão, a biblioteca [node-fetch](https://www.google.com/search?client=firefox-b-d&q=node+fetch) cumpre a função da extração de dados anteriormente citada. Além disso, a biblioteca [steamapi](https://www.npmjs.com/package/steamapi) também converte nomes da steam em IDs, bem como mostra dados do usuário da Steam, de modo a complementar a API criada pelo discente.
+A segunda delas, é a API da steam criada pelo discente, a qual se conecta à API fornecida pela steam e extrai apenas informações do CS:GO. O motivo pela utilização de uma API que extrai as informações de outra API está relacionado ao bloqueio do CORS, não implementado na API original. Por essa razão, a biblioteca [node-fetch](https://www.npmjs.com/package/node-fetch) cumpre a função da extração de dados anteriormente citada. Além disso, a biblioteca [steamapi](https://www.npmjs.com/package/steamapi) também converte nomes da steam em IDs, bem como mostra dados do usuário da Steam, de modo a complementar a API criada pelo discente.
 
 Ambas as APIs estão hospedadas no [Heroku](https://dashboard.heroku.com/), uma plataforma em nuvem para hospedagem de serviços.
 
-Links para acessar as API do heroku:
+Links para acessar as APIs hospedadas no Heroku:
 
-- *HLTV*: [api-hltv-natham.herokuapp.com](api-hltv-natham.herokuapp.com)
-- *Steam*: [api-steam-natham.herokuapp.com](api-steam-natham.herokuapp.com)
+- *HLTV*: [api-hltv-natham.herokuapp.com](https://api-hltv-natham.herokuapp.com/)
+- *Steam*: [api-steam-natham.herokuapp.com](https://api-steam-natham.herokuapp.com/)
 
 ## Metas atuais
 

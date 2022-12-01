@@ -8,13 +8,17 @@ import { CompetitivoComponent } from './competitivo/competitivo.component';
 import { EstatisticasComponent } from './estatisticas/estatisticas.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ComunidadeComponent } from './comunidade/comunidade.component';
+import { IndisponivelComponent } from './indisponivel/indisponivel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CompetitivoComponent,
-    EstatisticasComponent
+    EstatisticasComponent,
+    ComunidadeComponent,
+    IndisponivelComponent
   ],
   imports: [
     BrowserModule,

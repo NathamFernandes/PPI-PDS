@@ -1,13 +1,17 @@
+import { IndisponivelComponent } from './indisponivel/indisponivel.component';
+import { ComunidadeComponent } from './comunidade/comunidade.component';
 import { EstatisticasComponent } from './estatisticas/estatisticas.component';
 import { CompetitivoComponent } from './competitivo/competitivo.component';
 import { HomeComponent } from './home/home.component';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'competitivo', component: CompetitivoComponent},
-  { path: 'estatisticas', component: EstatisticasComponent}
+  { path: 'estatisticas', component: EstatisticasComponent},
+  { path: 'comunidade', component: ComunidadeComponent},
+  { path: '**', component: IndisponivelComponent }
 ];
 
 @NgModule({

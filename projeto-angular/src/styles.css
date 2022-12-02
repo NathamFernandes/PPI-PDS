@@ -42,6 +42,7 @@ html {
     text-align: center;
     padding-top: 400px;
     padding-bottom: 400px;
+    line-height: 60px;
 }
 
 /* ELEMENTOS HEADER - VERIFICAR RESPONSIVIDADE DE TELA DO HEADER */

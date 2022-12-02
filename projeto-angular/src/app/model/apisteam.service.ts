@@ -11,12 +11,12 @@ export class ApisteamService {
   constructor(private http: HttpClient) { }
 
   obterStatsUser(iduser: string) : Observable<any> {
-    let URL = `https://api-steam-natham.herokuapp.com/usuarios/${iduser}`
+    let URL = `http://ec2-3-95-164-201.compute-1.amazonaws.com:3100/usuarios/${iduser}`
     return this.http.get(URL)
   }
 
   obterSumario(iduser: string) : Observable<any> {
-    let URL_2 = `https://api-steam-natham.herokuapp.com/sumario/${iduser}`
+    let URL_2 = `http://ec2-3-95-164-201.compute-1.amazonaws.com:3100/sumario/${iduser}`
     return this.http.get(URL_2)
   }
 

@@ -34,9 +34,12 @@ html {
 }
 
 #home-text-01 {
-    color: white;
     font-family: CSFont;
     font-size: 50px;
+}
+
+#home-text-indis, #home-text-01 {
+    color: white;
     justify-content: center;
     display: flex;
     text-align: center;
@@ -71,7 +74,7 @@ nav ul {
 nav ul li {
     display: inline-block;
     margin: 0 20px;
-    line-height: 90px;
+    line-height: 87px;
 }
 
 nav ul li a {
@@ -90,7 +93,7 @@ nav a:hover {
 .checkbtn {
     float: right;
     padding-right: 12px;
-    padding-top: 18px;
+    padding-top: 16px;
     cursor: pointer;
     display: none;
 }
@@ -193,6 +196,11 @@ footer {
     .footer-col {
         width: 50%;
         margin-bottom: 30px;
+    }
+
+    .logo-01 {
+        margin-top: 5px;
+        padding: 0 20px;
     }
 }
 

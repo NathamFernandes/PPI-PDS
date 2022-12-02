@@ -6,6 +6,7 @@ import { Jogador } from './../model/jogador';
 import { ApisteamService } from './../model/apisteam.service';
 import { Component, OnInit } from '@angular/core';
 import { find } from 'rxjs';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-estatisticas',
@@ -26,8 +27,10 @@ export class EstatisticasComponent implements OnInit {
   sumarioUsuario: Sumario;
   sumarioAmigoUm: Sumario;
   sumarioAmigoDois: Sumario;
+  iduserForm: FormGroup;
+  idamigosForm: FormGroup;
 
-  constructor(private ss: ApisteamService) {
+  constructor(private ss: ApisteamService, private fb: FormBuilder) {
     this.listaJogador = new Jogador;
     this.listaAmigoUm = new Jogador;
     this.listaAmigoDois = new Jogador;
@@ -40,7 +43,14 @@ export class EstatisticasComponent implements OnInit {
     this.listaCoisasDois = new StatsReais;
     this.sumarioUsuario = new Sumario;
     this.sumarioAmigoUm = new Sumario;
-    this.sumarioAmigoDois= new Sumario;
+    this.sumarioAmigoDois = new Sumario;
+    this.iduserForm = this.fb.group({
+      iduser: ["", [Validators.required]],
+    })
+    this.idamigosForm = this.fb.group({
+      idamigo1:  ["", [Validators.required]],
+      idamigo2:  ["", [Validators.required]]
+    })
   }
 
 

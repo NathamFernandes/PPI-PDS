@@ -24,28 +24,26 @@
     </nav>
 </header>
 
-<!-- feito de noite -->
+<!-- ATÉ AQUI, NADA MUDA -->
 
 <body>
     <h1 style="color: white">COMPARA PLAYERS</h1>
-    <div>
-        <label for="idamigo1" style="color: white">ID do amigo 1:</label>
-        <input id="idamigo1" name="idamigo1" type="string" #idamigo1>
-    </div>
 
-    <div>
-        <label for="idamigo2" style="color: white">ID do amigo 2:</label>
-        <input id="idamigo2" name="idamigo2" type="string" #idamigo2>
-    </div>
+    <form [formGroup]="idamigosForm">
+        <div>
+            <label for="idamigo1" style="color: white">ID do amigo 1:</label>
+            <input id="idamigo1" name="idamigo1" formControlName="idamigo1" type="string" #idamigo1>
+        </div>
 
-    <input type="button" value="Comparar" (click)="compararDadosAmigos(idamigo1, idamigo2)">
+        <div>
+            <label for="idamigo2" style="color: white">ID do amigo 2:</label>
+            <input id="idamigo2" name="idamigo2" formControlName="idamigo2" type="string" #idamigo2>
+        </div>
 
+        <input type="button" value="Comparar" [disabled]="!idamigosForm.valid"
+            (click)="compararDadosAmigos(idamigo1, idamigo2)">
+    </form>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     <div style="color: white; display:inline-block">
         <h1>AMIGO 1</h1>
         <h2><img [src]="sumarioAmigoUm.avatar['large']"></h2>
@@ -85,19 +83,16 @@
     </div>
 
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+
     <h1 style="color: white">MOSTRA STATS</h1>
-    <div>
-        <label for="iduser" style="color: white">ID do usuário:</label>
-        <input id="iduser" name="iduser" type="string" #iduser>
-    </div>
-    <input type="button" value="Procurar" (click)="exibirDadosUser(iduser)">
+
+    <form [formGroup]="iduserForm">
+        <div>
+            <label for="iduser" style="color: white">ID do usuário:</label>
+            <input id="iduser" name="iduser" formControlName="iduser" type="string" #iduser>
+        </div>
+        <input type="button" value="Procurar" [disabled]="!iduserForm.valid" (click)="exibirDadosUser(iduser)">
+    </form>
 
     <div style="color: white">
         <h2><img [src]="sumarioUsuario.avatar['large']"></h2>
@@ -115,47 +110,48 @@
         <h2>Total de kills com inimigo cegado: {{ listaCoisas.total_kills_enemy_blinded }}</h2>
     </div>
 
-    <!-- EXIBE STATS AMIGOS -->
-
-
+    <footer>
+        <div class="footer-div">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Competitivo</h4>
+                    <ul>
+                        <li><a href="/competitivo">Notícias</a></li>
+                        <li><a href="/competitivo">Times</a></li>
+                        <li><a href="/competitivo">Times Brasileiros</a></li>
+                        <li><a href="/competitivo">Jogadores</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Estatísticas</h4>
+                    <ul>
+                        <li><a href="/estatisticas">Stats</a></li>
+                        <li><a href="/estatisticas">Comparar Stats</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Sobre o projeto</h4>
+                    <ul>
+                        <li><a href="#">Documentação DOC</a></li>
+                        <li><a href="https://github.com/NathamFernandes/PPI-PDS/blob/main/README.md">Documentação
+                                GitHub</a></li>
+                        <li><a href="https://github.com/NathamFernandes/PPI-PDS">Repositório do Projeto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Redes sociais</h4>
+                    <div class="social-links">
+                        <a href="https://steamcommunity.com/profiles/76561198248619940"><img
+                                src="../../assets/img/steam.png"></a>
+                        <a href="https://www.instagram.com/natham.fr"><img src="../../assets/img/instagram.png"></a>
+                        <a href="https://www.linkedin.com/in/natham-fernandes-804227223"><img
+                                src="../../assets/img/linkedin.png"></a>
+                        <a href="https://github.com/NathamFernandes"><img src="../../assets/img/github.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
-
-
 </html>
-
-<!-- feito de noite -->
-
-
-<!-- <div>  EXIBE STATS AMIGOS
-    <div>
-        <label for="idamigo1" style="color: white">ID do amigo 1:</label>
-        <input id="idamigo1" name="idamigo1" type="number" #idamigo1>
-    </div>
-
-    <div>
-        <label for="idamigo2" style="color: white">ID do amigo 2:</label>
-        <input id="idamigo2" name="idamigo2" type="number" #idamigo2>
-    </div>
-
-    <input type="button" value="Procurar" (click)="compararDadosAmigos(idamigo1, idamigo2)">
-
-    <div style="color: white">
-        <h1>AMIGO 1</h1>
-        <h2>Kills: {{ listaAmigo1.stats.total_kills }}</h2>
-        <h2>Deaths: {{ listaAmigo1.stats.total_kills }}</h2>
-        <h2>Time: {{ listaAmigo1.stats.total_time_played }}</h2>
-        <h2>Wins: {{ listaAmigo1.stats.total_wins }}</h2>
-        <h2>Kills AK: {{ listaAmigo1.stats.total_kills_ak47 }}</h2>
-    </div>
-
-    <div style="color: white">
-        <h1>AMIGO 2</h1>
-        <h2>Kills: {{ listaAmigo2.stats.total_kills }}</h2>
-        <h2>Deaths: {{ listaAmigo2.stats.total_kills }}</h2>
-        <h2>Time: {{ listaAmigo2.stats.total_time_played }}</h2>
-        <h2>Wins: {{ listaAmigo2.stats.total_wins }}</h2>
-        <h2>Kills AK: {{ listaAmigo2.stats.total_kills_ak47 }}</h2>
-    </div>
-</div>
- -->

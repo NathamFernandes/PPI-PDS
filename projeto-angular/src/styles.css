@@ -24,6 +24,8 @@ html {
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 #all {
@@ -54,15 +56,8 @@ header {
     font-size: 30px;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 nav {
     background-color: rgb(45, 48, 51);
-    /* 45, 48, 51 */
     width: 100%;
 }
 
@@ -75,7 +70,7 @@ nav ul {
 nav ul li {
     display: inline-block;
     margin: 0 20px;
-    line-height: 20px;
+    line-height: 90px;
 }
 
 nav ul li a {
@@ -86,7 +81,7 @@ nav ul li a {
     font-weight: bolder;
 }
 
-a:hover {
+nav a:hover {
     transition: .5;
     background-color: rgb(65, 68, 71);
 }
@@ -103,6 +98,81 @@ a:hover {
     display: none;
 }
 
+/* FOOTER */
+
+footer {
+    background-color: rgb(38, 45, 51);
+    padding: 35px 0;
+    font-family: Poppins;
+}
+
+.footer-div {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.footer-col ul a {
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul a:hover {
+    color: white;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 52px;
+    border-radius: 50%;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: rgb(155, 153, 153);
+}
+
 /* MEDIA HEDAER (POR ENQUANTO) */
 
 @media (max-width: 1140px) {
@@ -116,7 +186,12 @@ a:hover {
     }
 
     #home-text-01 {
-        padding: 100px;
+        padding: 200px 10px 200px 10px;
+    }
+
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
     }
 }
 
@@ -125,7 +200,7 @@ a:hover {
         display: block;
     }
 
-    ul {
+    nav ul {
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -146,9 +221,13 @@ a:hover {
         font-size: 20px;
     }
 
-    a:hover {
+    nav a:hover {
         background: none;
         color: #0082e6;
+    }
+
+    #home-text-01 {
+        padding: 150px 10px 150px 10px;
     }
 
     #check:checked~ul {

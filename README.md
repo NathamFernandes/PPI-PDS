@@ -75,7 +75,7 @@ Alguns dos objetivos a serem cumpridos em relação à aplicação.
 
 - Planejamento do design da página
 - <s>Mostrar foto de perfil do jogador</s>
-- Validators
+- <s>Validators</s>
 - <s>Mostrar perfil da steam do jogador</s>
 
 ### Comunidade

@@ -24,6 +24,9 @@
     </nav>
 </header>
 <body>
+    <div style="color: white; padding-bottom: 50px;" *ngFor="let noticia of noticias"> 
+        <h3>Noticia: {{ noticia.title }}</h3>
+    </div>
     <!-- LISTA DE 30 MELHORES JOGADORES -->
     <div style="color: white; padding-bottom: 50px;" *ngFor="let player of listaJogadores | slice:0:30; let i=index">
         <h2>ID: {{ player.id }}</h2>

@@ -13,12 +13,14 @@ export class CompetitivoComponent implements OnInit {
   listaTimes: TopTimes[];
   JogadorID: CompPlayer;
   TimeID: TopTimes;
+  noticias: any;
 
   constructor(private hs: ApihltvService) {
     this.listaJogadores = [];
     this.listaTimes = [];
     this.JogadorID = new CompPlayer;
     this.TimeID = new TopTimes;
+    this.noticias = [];
   }
 
   ngOnInit(): void {
@@ -27,6 +29,9 @@ export class CompetitivoComponent implements OnInit {
     })
     this.hs.obterDadosTimes().subscribe(res => {
       this.listaTimes = res
+    })
+    this.hs.obterNoticias().subscribe(res => {
+      this.noticias = res
     })
   }
 

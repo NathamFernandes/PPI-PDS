@@ -27,22 +27,69 @@
 <!-- ATÉ AQUI, NADA MUDA -->
 
 <body>
+    <div id="div-01">
+        <h2>MOSTRA STATS</h2>
+
+        <label for="iduser" style="color: white">ID do usuário:</label>
+        <input id="iduser" name="iduser" type="string" #iduser>
+
+        <input type="button" value="Mostrar Estatísticas" (click)="exibirDadosUser(iduser)">
+
+        <table id="div-01-01">
+            <tr>
+                <th><img [src]="sumarioUsuario.avatar['large']"></th>
+            </tr>
+            <tr>
+                <td>Nick:</td>
+                <td>{{ sumarioUsuario.nickname }}</td>
+            </tr>
+            <tr>
+                <td>Partidas jogadas:</td>
+                <td>{{ dados.total_matches_played }}</td>
+            </tr>
+            <!--        <h2>Perfil da Steam: <a [href]="sumarioUsuario.url">{{ sumarioUsuario.url }}</a></h2> -->
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <li>Win Rate: {{ dados.win_rate }}</li>
+            <li>Kill/Death Ratio: {{ dados.kd }}</li>
+            <li>Kills: {{ dados.total_kills }}</li>
+            <li>Mortes: {{ dados.total_deaths }}</li>
+            <li>Kills de AWP: {{ dados.total_kills_awp }}</li>
+            <li>Kills de AK: {{ dados.total_kills_ak47 }}</li>
+            <li>Kills de M4: {{ dados.total_kills_m4a1 }}</li>
+            <li>Mapa mais jogado: {{ dados.mapa_preferido }}</li>
+        </table>
+    </div>
+
+
+
+    <!--        <h2>Total de rounds ganhos: {{ listaCoisas.total_wins }}</h2>
+        <h2>Total de kills com Deagle: {{ listaCoisas.total_kills_deagle }}</h2>
+        <h2>Total de kills com AWP: {{ listaCoisas.total_kills_awp }}</h2>
+        <h2>Total de kills com AK: {{ listaCoisas.total_kills_ak47 }}</h2>
+        <h2>Total de kills com M4: {{ listaCoisas.total_kills_m4a1 }}</h2>
+        <h2>Total de kills de HS: {{ listaCoisas.total_kills_headshot }}</h2>
+        <h2>Total de kills com inimigo cegado: {{ listaCoisas.total_kills_enemy_blinded }}</h2>
+    </div>
+
     <h1 style="color: white">COMPARA PLAYERS</h1>
 
-    <form [formGroup]="idamigosForm">
-        <div>
-            <label for="idamigo1" style="color: white">ID do amigo 1:</label>
-            <input id="idamigo1" name="idamigo1" formControlName="idamigo1" type="string" #idamigo1>
-        </div>
+    <div>
+        <label for="idamigo1" style="color: white">ID do amigo 1:</label>
+        <input id="idamigo1" name="idamigo1" type="string" #idamigo1>
+    </div>
 
-        <div>
-            <label for="idamigo2" style="color: white">ID do amigo 2:</label>
-            <input id="idamigo2" name="idamigo2" formControlName="idamigo2" type="string" #idamigo2>
-        </div>
+    <div>
+        <label for="idamigo2" style="color: white">ID do amigo 2:</label>
+        <input id="idamigo2" name="idamigo2" type="string" #idamigo2>
+    </div>
 
-        <input type="button" value="Comparar" [disabled]="!idamigosForm.valid"
-            (click)="compararDadosAmigos(idamigo1, idamigo2)">
-    </form>
+    <input type="button" value="Comparar" (click)="compararDadosAmigos(idamigo1, idamigo2)">
+
 
     <div style="color: white; display:inline-block">
         <h1>AMIGO 1</h1>
@@ -83,33 +130,7 @@
     </div>
 
     <br>
-
-    <h1 style="color: white">MOSTRA STATS</h1>
-
-    <form [formGroup]="iduserForm">
-        <div>
-            <label for="iduser" style="color: white">ID do usuário:</label>
-            <input id="iduser" name="iduser" formControlName="iduser" type="string" #iduser>
-        </div>
-        <input type="button" value="Procurar" [disabled]="!iduserForm.valid" (click)="exibirDadosUser(iduser)">
-    </form>
-
-    <div style="color: white">
-        <h2><img [src]="sumarioUsuario.avatar['large']"></h2>
-        <h2>Nickname: {{ sumarioUsuario.nickname }}</h2>
-        <h2>ID da STEAM: {{ listaJogador.playerstats.steamID }}</h2>
-        <h2>Perfil da Steam: <a [href]="sumarioUsuario.url">{{ sumarioUsuario.url }}</a></h2>
-        <h2>Total de kills: {{ listaCoisas.total_kills }}</h2>
-        <h2>Total de mortes: {{ listaCoisas.total_deaths }}</h2>
-        <h2>Total de rounds ganhos: {{ listaCoisas.total_wins }}</h2>
-        <h2>Total de kills com Deagle: {{ listaCoisas.total_kills_deagle }}</h2>
-        <h2>Total de kills com AWP: {{ listaCoisas.total_kills_awp }}</h2>
-        <h2>Total de kills com AK: {{ listaCoisas.total_kills_ak47 }}</h2>
-        <h2>Total de kills com M4: {{ listaCoisas.total_kills_m4a1 }}</h2>
-        <h2>Total de kills de HS: {{ listaCoisas.total_kills_headshot }}</h2>
-        <h2>Total de kills com inimigo cegado: {{ listaCoisas.total_kills_enemy_blinded }}</h2>
-    </div>
-
+-->
     <footer>
         <div class="footer-div">
             <div class="row">

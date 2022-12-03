@@ -11,13 +11,13 @@ export class ApisteamService {
   constructor(private http: HttpClient) { }
 
   obterStatsUser(iduser: string) : Observable<any> {
-    let URL = `https://elated-gray-snaps.cyclic.app/usuarios/${iduser}`
+    let URL = `http://localhost:3000/usuarios/${iduser}`
     return this.http.get(URL)
   }
 
   obterSumario(iduser: string) : Observable<any> {
-    let URL_2 = `https://elated-gray-snaps.cyclic.app/sumario/${iduser}`
-    return this.http.get(URL_2)
+    let URL = `http://localhost:3000/sumario/${iduser}`
+    return this.http.get(URL)
   }
 
 }

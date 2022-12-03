@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ComunidadeComponent } from './comunidade/comunidade.component';
 import { IndisponivelComponent } from './indisponivel/indisponivel.component';
+import { MatSlideToggleModule, MatTableModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,9 @@ import { IndisponivelComponent } from './indisponivel/indisponivel.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatSlideToggleModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

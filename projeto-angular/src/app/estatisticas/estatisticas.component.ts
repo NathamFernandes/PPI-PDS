@@ -1,10 +1,10 @@
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Sumario } from './../model/sumario';
 import { StatsReais } from './../model/statsreais';
 import { Stats } from './../model/stats';
 import { Jogador } from './../model/jogador';
 import { ApisteamService } from './../model/apisteam.service';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-estatisticas',

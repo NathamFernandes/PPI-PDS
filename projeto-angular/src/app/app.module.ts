@@ -10,7 +10,7 @@ import { EstatisticasComponent } from './estatisticas/estatisticas.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ComunidadeComponent } from './comunidade/comunidade.component';
 import { IndisponivelComponent } from './indisponivel/indisponivel.component';
-import { MatSlideToggleModule, MatTableModule } from '@angular/material';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -27,8 +27,7 @@ import { MatSlideToggleModule, MatTableModule } from '@angular/material';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    MatSlideToggleModule,
-    MatTableModule
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

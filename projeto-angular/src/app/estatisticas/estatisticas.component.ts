@@ -13,7 +13,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EstatisticasComponent implements OnInit {
   jogador; amigoUm; amigoDois: Jogador;
-  statsJogador; statsAmigoUm; statsAmigoDois; listaStats: any;
+  statsJogador; statsAmigoUm; statsAmigoDois; listaStats; dataSource: any;
   dados; dadosAmigoUm; dadosAmigoDois: StatsReais;
   sumarioUsuario; sumarioAmigoUm; sumarioAmigoDois: Sumario;
 
@@ -37,37 +37,37 @@ export class EstatisticasComponent implements OnInit {
   }
 
   exibirDadosUser(iduser: HTMLInputElement): void {
-    this.ss.obterStatsUser(iduser.value).subscribe(res => {
+    this.ss.obterStatsUser(iduser.value).subscribe((res: any) => {
       this.jogador = res
       this.statsJogador = this.jogador.playerstats.stats
       let stats_0 = this.statsJogador
       let listaDados = this.dados
       this.appendaObjeto(stats_0, listaDados)
     })
-    this.ss.obterSumario(iduser.value).subscribe(res => {
+    this.ss.obterSumario(iduser.value).subscribe((res: any) => {
       this.sumarioUsuario = res
     })
 
   }
   compararDadosAmigos(idamigo1: HTMLInputElement, idamigo2: HTMLInputElement): void {
-    this.ss.obterStatsUser(idamigo1.value).subscribe(res => {
+    this.ss.obterStatsUser(idamigo1.value).subscribe((res: any) => {
       this.amigoUm = res
       this.statsAmigoUm = this.amigoUm.playerstats.stats
       let stats_1 = this.statsAmigoUm
       let listaDados_1 = this.dadosAmigoUm
       this.appendaObjeto(stats_1, listaDados_1)
     })
-    this.ss.obterSumario(idamigo1.value).subscribe(res => {
+    this.ss.obterSumario(idamigo1.value).subscribe((res: any) => {
       this.sumarioAmigoUm = res
     })
-    this.ss.obterStatsUser(idamigo2.value).subscribe(res => {
+    this.ss.obterStatsUser(idamigo2.value).subscribe((res: any) => {
       this.amigoDois = res
       this.statsAmigoDois = this.amigoDois.playerstats.stats
       let stats_2 = this.statsAmigoDois
       let listaDados_2 = this.dadosAmigoDois
       this.appendaObjeto(stats_2, listaDados_2)
     })
-    this.ss.obterSumario(idamigo2.value).subscribe(res => {
+    this.ss.obterSumario(idamigo2.value).subscribe((res: any) => {
       this.sumarioAmigoDois = res
     })
   }
@@ -82,7 +82,7 @@ export class EstatisticasComponent implements OnInit {
     listaDados['kd'] = this.calculaKD(stats)
     listaDados['mapa_preferido'] = this.calculaMapa(stats)
     listaDados['win_rate'] = this.calculaWinRate(stats)
-    console.log(listaDados)
+    this.dataSource = listaDados
   }
 
   calculaKD(stats: any) {

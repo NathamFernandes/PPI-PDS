@@ -21,12 +21,15 @@
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
-    "importHelpers": true,
+    "importHelpers": false,
     "target": "ES2022",
     "module": "es2020",
     "lib": [
       "es2020",
       "dom"
+    ],
+    "types": [
+      "@angular/localize"
     ],
     "useDefineForClassFields": false
   },

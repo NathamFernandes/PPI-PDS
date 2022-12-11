@@ -8,6 +8,7 @@ import { NgModule, Component } from '@angular/core';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
+  { path: 'home', component: HomeComponent},
   { path: 'competitivo', component: CompetitivoComponent},
   { path: 'estatisticas', component: EstatisticasComponent},
   { path: 'comunidade', component: ComunidadeComponent},

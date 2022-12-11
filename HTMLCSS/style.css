@@ -133,6 +133,14 @@ a:hover {
     margin-bottom: 5px;
 }
 
+.container-box {
+    width: 200px;
+    text-align: center;
+    float: right;
+    background-color: yellow;
+    padding-top: 1%;
+}
+
 #div-04 {
     background-color: aqua;
     padding: 20px;
@@ -171,12 +179,11 @@ a:hover {
 
 /* https://www.youtube.com/watch?v=oLgtucwjVII 2:39 */
 
-
-
 @media (max-width: 1140px) {
     nav ul li a {
         font-size: 25px;
     }
+
     #all {
         margin-left: 150px;
         margin-right: 150px;
@@ -221,4 +228,78 @@ a:hover {
     #check:checked~ul {
         left: 0;
     }
+}
+
+/* divs */
+
+
+
+@media (max-width: 1789px) {
+    .container-box {
+        padding-top: 3%;
+    }
+}
+
+@media (max-width: 1464px) {
+    .container-box {
+        padding-top: 5%;
+    }
+}
+
+@media (max-width: 1275px) {
+    .container-box {
+        padding-top: 7%;
+    }
+}
+
+@media (max-width: 1178px) {
+    .container-box {
+        padding-top: 9%;
+        background-color: red;
+    }
+}
+
+@media (max-width: 1025px) {
+    .container-box {
+        padding-top: 12%;
+        background-color: green;
+    }
+}
+
+@media (max-width: 982px) {
+    .container-box {
+        padding-top: 17%;
+        background-color: orange;
+    }
+}
+
+@media (max-width: 920px) {
+    .container-box {
+        padding-top: 22%;
+        background-color: violet;
+    }
+}
+
+@media (max-width: 900px) {
+    #all {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    #div-03 {
+        display: flex;  
+        flex-direction: column;
+        width: 300px;
+        justify-content: center;
+        margin: auto;
+        text-align: center;
+    }
+    .container-box {    
+        padding-top: 0;
+        padding-left: 30px;
+    }
+    #p-03 {
+        margin-right: 20px;
+        float: none;
+    }
+
 }

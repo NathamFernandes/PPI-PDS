@@ -10,7 +10,6 @@ import { EstatisticasComponent } from './estatisticas/estatisticas.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ComunidadeComponent } from './comunidade/comunidade.component';
 import { IndisponivelComponent } from './indisponivel/indisponivel.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -27,7 +26,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

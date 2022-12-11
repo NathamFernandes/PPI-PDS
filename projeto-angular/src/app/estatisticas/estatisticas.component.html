@@ -8,27 +8,9 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' href='estatisticas.component.css'>
 </head>
-<header>
-    <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <img class="checkbtn" src="../../assets/img/pixel-list.png">
-        </label>
-        <img class="logo-01" src="../../assets/img/csbrasil-branco-header-2.png">
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/competitivo">Competitivo</a></li>
-            <li><a href="/estatisticas">Estatísticas</a></li>
-            <li><a href="/comunidade">Comunidade</a></li>
-        </ul>
-    </nav>
-</header>
-
-<!-- ATÉ AQUI, NADA MUDA -->
 
 <body>
     <div id="div-01">
-
           
         <h2>MOSTRA STATS</h2>
 
@@ -37,7 +19,7 @@
 
         <input type="button" value="Mostrar Estatísticas" (click)="exibirDadosUser(iduser)">
 
-        <table id="div-01-01">
+        <table id="table-01">
             <tr>
                 <th><img [src]="sumarioUsuario.avatar['large']"></th>
             </tr>
@@ -49,13 +31,6 @@
                 <td>Partidas jogadas:</td>
                 <td>{{ dados.total_matches_played }}</td>
             </tr>
-            <!--        <h2>Perfil da Steam: <a [href]="sumarioUsuario.url">{{ sumarioUsuario.url }}</a></h2> -->
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-
             <li>Win Rate: {{ dados.win_rate }}</li>
             <li>Kill/Death Ratio: {{ dados.kd }}</li>
             <li>Kills: {{ dados.total_kills }}</li>
@@ -65,17 +40,6 @@
             <li>Kills de M4: {{ dados.total_kills_m4a1 }}</li>
             <li>Mapa mais jogado: {{ dados.mapa_preferido }}</li>
         </table>
-    </div>
-
-
-
-    <!--        <h2>Total de rounds ganhos: {{ listaCoisas.total_wins }}</h2>
-        <h2>Total de kills com Deagle: {{ listaCoisas.total_kills_deagle }}</h2>
-        <h2>Total de kills com AWP: {{ listaCoisas.total_kills_awp }}</h2>
-        <h2>Total de kills com AK: {{ listaCoisas.total_kills_ak47 }}</h2>
-        <h2>Total de kills com M4: {{ listaCoisas.total_kills_m4a1 }}</h2>
-        <h2>Total de kills de HS: {{ listaCoisas.total_kills_headshot }}</h2>
-        <h2>Total de kills com inimigo cegado: {{ listaCoisas.total_kills_enemy_blinded }}</h2>
     </div>
 
     <h1 style="color: white">COMPARA PLAYERS</h1>
@@ -93,88 +57,50 @@
     <input type="button" value="Comparar" (click)="compararDadosAmigos(idamigo1, idamigo2)">
 
 
-    <div style="color: white; display:inline-block">
-        <h1>AMIGO 1</h1>
-        <h2><img [src]="sumarioAmigoUm.avatar['large']"></h2>
-        <h2>Nickname: {{ sumarioAmigoUm.nickname }}</h2>
-        <h2>ID da STEAM: {{ listaAmigoUm.playerstats.steamID }}</h2>
-        <h2>Perfil da Steam: <a [href]="sumarioAmigoUm.url">{{ sumarioAmigoUm.url }}</a></h2>
-        <h2>Total de kills: {{ listaCoisasUm.total_kills }}</h2>
-        <h2>Total de mortes: {{ listaCoisasUm.total_deaths }}</h2>
-        <h2>Total de rounds ganhos: {{ listaCoisasUm.total_wins }}</h2>
-        <h2>Total de kills com Deagle: {{ listaCoisasUm.total_kills_deagle }}</h2>
-        <h2>Total de kills com AWP: {{ listaCoisasUm.total_kills_awp }}</h2>
-        <h2>Total de kills com AK: {{ listaCoisasUm.total_kills_ak47 }}</h2>
-        <h2>Total de kills com M4: {{ listaCoisasUm.total_kills_m4a1 }}</h2>
-        <h2>Total de kills de HS: {{ listaCoisasUm.total_kills_headshot }}</h2>
-        <h2>Total de kills com inimigo cegado: {{ listaCoisasUm.total_kills_enemy_blinded }}</h2>
-        <h2>KD: {{ listaCoisasUm.kd }}</h2>
-        <h2>Mapa mais jogado: {{ listaCoisasUm.mapa_preferido }}</h2>
-    </div>
+    <table id="table-01">
+        <tr>
+            <th><img [src]="sumarioAmigoUm.avatar['large']"></th>
+        </tr>
+        <tr>
+            <td>Nick:</td>
+            <td>{{ sumarioAmigoUm.nickname }}</td>
+        </tr>
+        <tr>
+            <td>Partidas jogadas:</td>
+            <td>{{ dadosAmigoUm.total_matches_played }}</td>
+        </tr>
+        <li>Win Rate: {{ dadosAmigoUm.win_rate }}</li>
+        <li>Kill/Death Ratio: {{ dadosAmigoUm.kd }}</li>
+        <li>Kills: {{ dadosAmigoUm.total_kills }}</li>
+        <li>Mortes: {{ dadosAmigoUm.total_deaths }}</li>
+        <li>Kills de AWP: {{ dadosAmigoUm.total_kills_awp }}</li>
+        <li>Kills de AK: {{ dadosAmigoUm.total_kills_ak47 }}</li>
+        <li>Kills de M4: {{ dadosAmigoUm.total_kills_m4a1 }}</li>
+        <li>Mapa mais jogado: {{ dadosAmigoUm.mapa_preferido }}</li>
+    </table>
 
-    <div style="color: white; float: right">
-        <h1>AMIGO 2</h1>
-        <h2><img [src]="sumarioAmigoDois.avatar['large']"></h2>
-        <h2>Nickname: {{ sumarioAmigoDois.nickname }}</h2>
-        <h2>ID da STEAM: {{ listaAmigoDois.playerstats.steamID }}</h2>
-        <h2>Perfil da Steam: <a [href]="sumarioAmigoDois.url">{{ sumarioAmigoDois.url }}</a></h2>
-        <h2>Total de kills: {{ listaCoisasDois.total_kills }}</h2>
-        <h2>Total de mortes: {{ listaCoisasDois.total_deaths }}</h2>
-        <h2>Total de rounds ganhos: {{ listaCoisasDois.total_wins }}</h2>
-        <h2>Total de kills com Deagle: {{ listaCoisasDois.total_kills_deagle }}</h2>
-        <h2>Total de kills com AWP: {{ listaCoisasDois.total_kills_awp }}</h2>
-        <h2>Total de kills com AK: {{ listaCoisasDois.total_kills_ak47 }}</h2>
-        <h2>Total de kills com M4: {{ listaCoisasDois.total_kills_m4a1 }}</h2>
-        <h2>Total de kills de HS: {{ listaCoisasDois.total_kills_headshot }}</h2>
-        <h2>Total de kills com inimigo cegado: {{ listaCoisasDois.total_kills_enemy_blinded }}</h2>
-        <h2>KD: {{ listaCoisasDois.kd }}</h2>
-        <h2>Mapa mais jogado: {{ listaCoisasDois.mapa_preferido }}</h2>
-    </div>
+    <table id="table-01">
+        <tr>
+            <th><img [src]="sumarioAmigoDois.avatar['large']"></th>
+        </tr>
+        <tr>
+            <td>Nick:</td>
+            <td>{{ sumarioAmigoDois.nickname }}</td>
+        </tr>
+        <tr>
+            <td>Partidas jogadas:</td>
+            <td>{{ dadosAmigoDois.total_matches_played }}</td>
+        </tr>
+        <li>Win Rate: {{ dadosAmigoDois.win_rate }}</li>
+        <li>Kill/Death Ratio: {{ dadosAmigoDois.kd }}</li>
+        <li>Kills: {{ dadosAmigoDois.total_kills }}</li>
+        <li>Mortes: {{ dadosAmigoDois.total_deaths }}</li>
+        <li>Kills de AWP: {{ dadosAmigoDois.total_kills_awp }}</li>
+        <li>Kills de AK: {{ dadosAmigoDois.total_kills_ak47 }}</li>
+        <li>Kills de M4: {{ dadosAmigoDois.total_kills_m4a1 }}</li>
+        <li>Mapa mais jogado: {{ dadosAmigoDois.mapa_preferido }}</li>
+    </table>
 
-    <br>
--->
-    <footer>
-        <div class="footer-div">
-            <div class="row">
-                <div class="footer-col">
-                    <h4>Competitivo</h4>
-                    <ul>
-                        <li><a href="/competitivo">Notícias</a></li>
-                        <li><a href="/competitivo">Times</a></li>
-                        <li><a href="/competitivo">Times Brasileiros</a></li>
-                        <li><a href="/competitivo">Jogadores</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Estatísticas</h4>
-                    <ul>
-                        <li><a href="/estatisticas">Stats</a></li>
-                        <li><a href="/estatisticas">Comparar Stats</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Sobre o projeto</h4>
-                    <ul>
-                        <li><a href="#">Documentação DOC</a></li>
-                        <li><a href="https://github.com/NathamFernandes/PPI-PDS/blob/main/README.md">Documentação
-                                GitHub</a></li>
-                        <li><a href="https://github.com/NathamFernandes/PPI-PDS">Repositório do Projeto</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Redes sociais</h4>
-                    <div class="social-links">
-                        <a href="https://steamcommunity.com/profiles/76561198248619940"><img
-                                src="../../assets/img/steam.png"></a>
-                        <a href="https://www.instagram.com/natham.fr"><img src="../../assets/img/instagram.png"></a>
-                        <a href="https://www.linkedin.com/in/natham-fernandes-804227223"><img
-                                src="../../assets/img/linkedin.png"></a>
-                        <a href="https://github.com/NathamFernandes"><img src="../../assets/img/github.png"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
 </body>
 
 </html>

@@ -1,12 +1,34 @@
+.all-boxes {
+    background-color: rgb(61, 61, 61);
+}
+
 #div-esquerda {
     background-color: rgb(65, 68, 71);
-    padding: 0 70px 70px 70px;
+    padding: 60px;
+    margin-left: 200px;
+    margin-right: 200px;
+    transition: all 0.3s;
+}
+
+#div-esquerda:hover {
+    padding: 65px;
+    transition: all 0.3s;
+    background-color: rgb(73, 76, 80);
 }
 
 #div-direita {
     background-color: rgb(50, 54, 56);
-    padding: 70px;
     text-align: right;
+    padding: 60px;
+    margin-left: 200px;
+    margin-right: 200px;
+    transition: all 0.3s;
+}
+
+#div-direita:hover {
+    padding: 65px;
+    transition: all 0.3s;
+    background-color: rgb(53, 58, 59);
 }
 
 #p-esquerda {
@@ -28,44 +50,52 @@
 .container-box-right {
     width: 200px;
     float: right;
-    padding-top: -1.5%;
     padding-right: 3%;
+    margin-top: -2.5%;
 }
 
 .container-box-left {
     width: 200px;
     float: left;
-    padding-top: 3%;
-    padding-left: 2%;
+    padding-left: 1%;
+    margin-top: -1.5%
 }
 
-@media (max-width: 1789px) {
+.a-red {
+    color: rgb(255, 64, 64);
+}
+
+.a-green {
+    color: rgb(182, 255, 72);
+}
+
+.a-blue {
+    color: rgb(78, 78, 255);
+}
+
+.a-red, .a-green, .a-blue {
+    font-size: 60px;
+}
+
+@media (max-width: 1869px) {
     .container-box-right {
-        padding-top: 3%;
+        padding-top: 1%;
+    }
+}
+
+@media (max-width: 1615px) {
+    .container-box-left {
+        padding-top: 2%;
+    }
+}
+
+@media (max-width: 1258px) {
+    .container-box-right {
+        padding-top: 6%;
     }
 
     .container-box-left {
-        padding-top: 5%;
-    }
-}
-
-@media (max-width: 1464px) {
-    .container-box-right {
-        padding-top: 5%;
-    }
-
-    .container-box-left {
-        padding-top: 7%;
-    }
-}
-
-@media (max-width: 1275px) {
-    .container-box-right {
-        padding-top: 7%;
-    }
-
-    .container-box-left {
-        padding-top: 9%;
+        padding-top: 8%;
     }
 }
 
@@ -82,34 +112,16 @@
 @media (max-width: 1025px) {
     .container-box-right {
         padding-top: 12%;
+        background-color: violet;
     }
 
     .container-box-left {
         padding-top: 14%;
+        background-color: violet;
     }
 }
 
-@media (max-width: 982px) {
-    .container-box-right {
-        padding-top: 17%;
-    }
-
-    .container-box-left {
-        padding-top: 18%;
-    }
-}
-
-@media (max-width: 920px) {
-    .container-box-right {
-        padding-top: 22%;
-    }
-
-    .container-box-left {
-        padding-top: 24%;
-    }
-}
-
-@media (max-width: 900px) {
+@media (max-width: 990px) {
     #all {
         margin-left: 100px;
         margin-right: 100px;
@@ -161,6 +173,7 @@
 
     #div-esquerda,
     #div-direita {
-        width: 300px;
+        width: 350px;
     }
+
 }

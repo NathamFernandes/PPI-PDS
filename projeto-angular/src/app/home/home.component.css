@@ -1,0 +1,166 @@
+#div-esquerda {
+    background-color: rgb(65, 68, 71);
+    padding: 0 70px 70px 70px;
+}
+
+#div-direita {
+    background-color: rgb(50, 54, 56);
+    padding: 70px;
+    text-align: right;
+}
+
+#p-esquerda {
+    color: white;
+    word-break: normal;
+    font-size: x-large;
+    text-align: justify;
+    margin-right: 300px;
+}
+
+#p-direita {
+    color: white;
+    word-break: normal;
+    font-size: x-large;
+    text-align: justify;
+    margin-left: 300px;
+}
+
+.container-box-right {
+    width: 200px;
+    float: right;
+    padding-top: -1.5%;
+    padding-right: 3%;
+}
+
+.container-box-left {
+    width: 200px;
+    float: left;
+    padding-top: 3%;
+    padding-left: 2%;
+}
+
+@media (max-width: 1789px) {
+    .container-box-right {
+        padding-top: 3%;
+    }
+
+    .container-box-left {
+        padding-top: 5%;
+    }
+}
+
+@media (max-width: 1464px) {
+    .container-box-right {
+        padding-top: 5%;
+    }
+
+    .container-box-left {
+        padding-top: 7%;
+    }
+}
+
+@media (max-width: 1275px) {
+    .container-box-right {
+        padding-top: 7%;
+    }
+
+    .container-box-left {
+        padding-top: 9%;
+    }
+}
+
+@media (max-width: 1178px) {
+    .container-box-right {
+        padding-top: 9%;
+    }
+
+    .container-box-left {
+        padding-top: 11%;
+    }
+}
+
+@media (max-width: 1025px) {
+    .container-box-right {
+        padding-top: 12%;
+    }
+
+    .container-box-left {
+        padding-top: 14%;
+    }
+}
+
+@media (max-width: 982px) {
+    .container-box-right {
+        padding-top: 17%;
+    }
+
+    .container-box-left {
+        padding-top: 18%;
+    }
+}
+
+@media (max-width: 920px) {
+    .container-box-right {
+        padding-top: 22%;
+    }
+
+    .container-box-left {
+        padding-top: 24%;
+    }
+}
+
+@media (max-width: 900px) {
+    #all {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    #div-esquerda,
+    #div-direita {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        justify-content: center;
+        margin: auto;
+        text-align: center;
+    }
+
+    .container-box-right,
+    .container-box-left {
+        margin: auto;
+        padding-top: 0;
+        float: none;
+    }
+
+    #p-esquerda,
+    #p-direita {
+        margin-right: 20px;
+        margin-left: 20px;
+        float: none;
+        text-align: center;
+    }
+
+    .logo-01 {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 718px) {
+    #all {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    #div-esquerda,
+    #div-direita {
+        width: 400px;
+    }
+}
+
+@media (max-width: 718px) {
+
+    #div-esquerda,
+    #div-direita {
+        width: 300px;
+    }
+}

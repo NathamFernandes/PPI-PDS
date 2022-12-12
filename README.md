@@ -83,6 +83,4 @@ Alguns dos objetivos a serem cumpridos em relação à aplicação.
 - Fazer página de manutenção
     - *Aba de feedback (?)*
 
-https://sumantmishra.medium.com/how-to-deploy-node-js-app-on-aws-with-github-db99758294f1
-
-teste
+https://answers.netlify.com/t/deploy-failed-today-build-was-terminated-build-script-returned-non-zero-exit-code-1/64450

@@ -1,0 +1,58 @@
+body td {
+    border: solid grey 3px;
+    background-color: white;
+    padding: 3px;
+    text-align: center;
+}
+
+body th {
+    border: solid grey 3px;
+    background-color: white;
+    text-align: center;
+}
+
+.msg {
+    background-color: rgb(228, 228, 135);
+    padding: 15px;
+}
+
+.msg-h2 {
+    text-align: center;
+}
+
+#table-01 {
+    font-size: 40px;
+}
+
+.th-perfil {
+    width: 181px;
+    height: 181px;
+}
+
+.img-perfil {
+    margin-bottom: -5%;
+}
+
+@media (max-width: 500px) {
+    body td {
+        padding: 5px;
+    }
+
+    body th {
+        border: solid grey 3px;
+        background-color: white;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .th-perfil,
+    .img-perfil {
+        width: 90px;
+        height: 90px;
+    }
+
+    #table-01 {
+        font-size: 20px;
+    }
+
+}

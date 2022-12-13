@@ -10,18 +10,24 @@
 </head>
 
 <body>
+    <div class="msg">
+        <h2 class="msg-h2">Por motivos de problemas na API externa da Steam, a exibição de estatísticas pode aparecer
+            incompleta ou desatualizada. Caso isto ocorra, por favor, pressione novamente o botão da consulta. Obrigado!
+        </h2>
+    </div>
     <div id="div-01">
-          
+
         <h2>MOSTRA STATS</h2>
-
-        <label for="iduser" style="color: white">ID do usuário:</label>
-        <input id="iduser" name="iduser" type="string" #iduser>
-
-        <input type="button" value="Mostrar Estatísticas" (click)="exibirDadosUser(iduser)">
+        <form [formGroup]="iduserForm">
+            <label for="iduser" style="color: white">ID do usuário:</label>
+            <input id="iduser" name="iduser" formControlName="iduser" type="string" #iduser>
+        </form>
 
         <table id="table-01">
             <tr>
-                <th><img [src]="sumarioUsuario.avatar['large']"></th>
+                <th> <input type="button" value="Mostrar Estatísticas" [disabled]="!iduserForm.valid"
+                        (click)="exibirDadosUser(iduser)"></th>
+                <th class="th-perfil"><img class="img-perfil" [src]="sumarioUsuario.avatar['large']"></th>
             </tr>
             <tr>
                 <td>Nick:</td>
@@ -31,74 +37,115 @@
                 <td>Partidas jogadas:</td>
                 <td>{{ dados.total_matches_played }}</td>
             </tr>
-            <li>Win Rate: {{ dados.win_rate }}</li>
-            <li>Kill/Death Ratio: {{ dados.kd }}</li>
-            <li>Kills: {{ dados.total_kills }}</li>
-            <li>Mortes: {{ dados.total_deaths }}</li>
-            <li>Kills de AWP: {{ dados.total_kills_awp }}</li>
-            <li>Kills de AK: {{ dados.total_kills_ak47 }}</li>
-            <li>Kills de M4: {{ dados.total_kills_m4a1 }}</li>
-            <li>Mapa mais jogado: {{ dados.mapa_preferido }}</li>
+            <tr>
+                <td>Win Rate:</td>
+                <td>{{ dados.win_rate }}</td>
+            </tr>
+            <tr>
+                <td>Kill/Death Ratio:</td>
+                <td>{{ dados.kd }}</td>
+            </tr>
+            <tr>
+                <td>Kills:</td>
+                <td>{{ dados.total_kills }}</td>
+            </tr>
+            <tr>
+                <td>Mortes:</td>
+                <td>{{ dados.total_deaths }}</td>
+            </tr>
+            <tr>
+                <td>Kills de AWP:</td>
+                <td>{{ dados.total_kills_awp }}</td>
+            </tr>
+            <tr>
+                <td>Kills de AK:</td>
+                <td>{{ dados.total_kills_ak47 }}</td>
+            </tr>
+            <tr>
+                <td>Kills de M4:</td>
+                <td>{{ dados.total_kills_m4a1 }}</td>
+            </tr>
+            <tr>
+                <td>Mapa mais jogado:</td>
+                <td>{{ dados.mapa_preferido }}</td>
+            </tr>
         </table>
     </div>
 
     <h1 style="color: white">COMPARA PLAYERS</h1>
 
-    <div>
-        <label for="idamigo1" style="color: white">ID do amigo 1:</label>
-        <input id="idamigo1" name="idamigo1" type="string" #idamigo1>
-    </div>
+    <form [formGroup]="idamigoForm">
+        <div>
+            <label for="idamigo1" style="color: white">ID do amigo 1:</label>
+            <input id="idamigo1" name="idamigo1" formControlName="idamigo1" type="string" #idamigo1>
+        </div>
 
-    <div>
-        <label for="idamigo2" style="color: white">ID do amigo 2:</label>
-        <input id="idamigo2" name="idamigo2" type="string" #idamigo2>
-    </div>
+        <div>
+            <label for="idamigo2" style="color: white">ID do amigo 2:</label>
+            <input id="idamigo2" name="idamigo2" formControlName="idamigo2" type="string" #idamigo2>
+        </div>
+    </form>
 
-    <input type="button" value="Comparar" (click)="compararDadosAmigos(idamigo1, idamigo2)">
+    <input type="button" value="Comparar" [disabled]="!idamigoForm.valid"
+        (click)="compararDadosAmigos(idamigo1, idamigo2)">
 
 
     <table id="table-01">
         <tr>
-            <th><img [src]="sumarioAmigoUm.avatar['large']"></th>
+            <th>X</th>
+            <th class="th-perfil"><img class="img-perfil" [src]="sumarioAmigoUm.avatar['large']"></th>
+            <th class="th-perfil"><img class="img-perfil" [src]="sumarioAmigoDois.avatar['large']"></th>
         </tr>
         <tr>
             <td>Nick:</td>
             <td>{{ sumarioAmigoUm.nickname }}</td>
-        </tr>
-        <tr>
-            <td>Partidas jogadas:</td>
-            <td>{{ dadosAmigoUm.total_matches_played }}</td>
-        </tr>
-        <li>Win Rate: {{ dadosAmigoUm.win_rate }}</li>
-        <li>Kill/Death Ratio: {{ dadosAmigoUm.kd }}</li>
-        <li>Kills: {{ dadosAmigoUm.total_kills }}</li>
-        <li>Mortes: {{ dadosAmigoUm.total_deaths }}</li>
-        <li>Kills de AWP: {{ dadosAmigoUm.total_kills_awp }}</li>
-        <li>Kills de AK: {{ dadosAmigoUm.total_kills_ak47 }}</li>
-        <li>Kills de M4: {{ dadosAmigoUm.total_kills_m4a1 }}</li>
-        <li>Mapa mais jogado: {{ dadosAmigoUm.mapa_preferido }}</li>
-    </table>
-
-    <table id="table-01">
-        <tr>
-            <th><img [src]="sumarioAmigoDois.avatar['large']"></th>
-        </tr>
-        <tr>
-            <td>Nick:</td>
             <td>{{ sumarioAmigoDois.nickname }}</td>
         </tr>
         <tr>
             <td>Partidas jogadas:</td>
+            <td>{{ dadosAmigoUm.total_matches_played }}</td>
             <td>{{ dadosAmigoDois.total_matches_played }}</td>
         </tr>
-        <li>Win Rate: {{ dadosAmigoDois.win_rate }}</li>
-        <li>Kill/Death Ratio: {{ dadosAmigoDois.kd }}</li>
-        <li>Kills: {{ dadosAmigoDois.total_kills }}</li>
-        <li>Mortes: {{ dadosAmigoDois.total_deaths }}</li>
-        <li>Kills de AWP: {{ dadosAmigoDois.total_kills_awp }}</li>
-        <li>Kills de AK: {{ dadosAmigoDois.total_kills_ak47 }}</li>
-        <li>Kills de M4: {{ dadosAmigoDois.total_kills_m4a1 }}</li>
-        <li>Mapa mais jogado: {{ dadosAmigoDois.mapa_preferido }}</li>
+        <tr>
+            <td>Win Rate:</td>
+            <td>{{ dadosAmigoUm.win_rate }}</td>
+            <td>{{ dadosAmigoDois.win_rate }}</td>
+        </tr>
+        <tr>
+            <td>Kill/Death Ratio:</td>
+            <td>{{ dadosAmigoUm.kd }}</td>
+            <td>{{ dadosAmigoDois.kd }}</td>
+        </tr>
+        <tr>
+            <td>Kills:</td>
+            <td>{{ dadosAmigoUm.total_kills }}</td>
+            <td>{{ dadosAmigoDois.total_kills }}</td>
+        </tr>
+        <tr>
+            <td>Mortes:</td>
+            <td>{{ dadosAmigoUm.total_deaths }}</td>
+            <td>{{ dadosAmigoDois.total_deaths }}</td>
+        </tr>
+        <tr>
+            <td>Kills de AWP:</td>
+            <td>{{ dadosAmigoUm.total_kills_awp }}</td>
+            <td>{{ dadosAmigoDois.total_kills_awp }}</td>
+        </tr>
+        <tr>
+            <td>Kills de AK:</td>
+            <td>{{ dadosAmigoUm.total_kills_ak47 }}</td>
+            <td>{{ dadosAmigoDois.total_kills_ak47 }}</td>
+        </tr>
+        <tr>
+            <td>Kills de M4:</td>
+            <td>{{ dadosAmigoUm.total_kills_m4a1 }}</td>
+            <td>{{ dadosAmigoDois.total_kills_m4a1 }}</td>
+        </tr>
+        <tr>
+            <td>Mapa mais jogado:</td>
+            <td>{{ dadosAmigoUm.mapa_preferido }}</td>
+            <td>{{ dadosAmigoDois.mapa_preferido }}</td>
+        </tr>
     </table>
 
 </body>

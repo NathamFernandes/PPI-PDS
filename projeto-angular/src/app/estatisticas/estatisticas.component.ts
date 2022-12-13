@@ -13,24 +13,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EstatisticasComponent implements OnInit {
   jogador; amigoUm; amigoDois: Jogador;
-  statsJogador; statsAmigoUm; statsAmigoDois; listaStats; dataSource: any;
   dados; dadosAmigoUm; dadosAmigoDois: StatsReais;
   sumarioUsuario; sumarioAmigoUm; sumarioAmigoDois: Sumario;
+  listaStats: any;
+  iduserForm; idamigoForm: FormGroup;
 
   constructor(private ss: ApisteamService, private fb: FormBuilder) {
     this.listaStats = ['total_kills', 'total_deaths', 'total_matches_won', 'total_matches_played', 'total_kills_awp', 'total_kills_ak47', 'total_kills_m4a1', 'total_rounds_map_de_vertigo', 'total_rounds_map_de_inferno', 'total_rounds_map_de_dust2', 'total_rounds_map_de_train', 'total_rounds_map_de_nuke'];
     this.jogador = new Jogador;
     this.amigoUm = new Jogador;
     this.amigoDois = new Jogador;
-    this.statsJogador = {};
-    this.statsAmigoUm = {};
-    this.statsAmigoDois = {};
     this.dados = new StatsReais;
     this.dadosAmigoUm = new StatsReais;
     this.dadosAmigoDois = new StatsReais;
     this.sumarioUsuario = new Sumario;
     this.sumarioAmigoUm = new Sumario;
     this.sumarioAmigoDois = new Sumario;
+    this.iduserForm = this.fb.group({
+      iduser: ["", [Validators.required, Validators.maxLength(32)]],
+    });
+    this.idamigoForm = this.fb.group({
+      idamigo1: ["", [Validators.required, Validators.maxLength(32)]],
+      idamigo2: ["", [Validators.required, Validators.maxLength(32)]]
+    });
   }
 
   ngOnInit(): void {
@@ -38,34 +43,41 @@ export class EstatisticasComponent implements OnInit {
 
   exibirDadosUser(iduser: HTMLInputElement): void {
     this.ss.obterStatsUser(iduser.value).subscribe((res: any) => {
+      // Recebe as estatísticas brutas da STEAM
       this.jogador = res
-      this.statsJogador = this.jogador.playerstats.stats
-      let stats_0 = this.statsJogador
-      let listaDados = this.dados
-      this.appendaObjeto(stats_0, listaDados)
+      // Condição - se o jogador não possuir estatísticas no CS:GO
+      if (this.jogador.playerstats == undefined) {
+        // this.dados = { }
+        window.alert('Opção inválida! O usuário não possui estatísticas no CS:GO. Por favor, verifique se o perfil está privado ou não mostra informações de jogo.')
+      } else {
+        this.appendaObjeto(this.jogador.playerstats.stats, this.dados)
+      }
+
     })
     this.ss.obterSumario(iduser.value).subscribe((res: any) => {
       this.sumarioUsuario = res
     })
-
   }
+
   compararDadosAmigos(idamigo1: HTMLInputElement, idamigo2: HTMLInputElement): void {
     this.ss.obterStatsUser(idamigo1.value).subscribe((res: any) => {
       this.amigoUm = res
-      this.statsAmigoUm = this.amigoUm.playerstats.stats
-      let stats_1 = this.statsAmigoUm
-      let listaDados_1 = this.dadosAmigoUm
-      this.appendaObjeto(stats_1, listaDados_1)
+      if (this.amigoUm.playerstats == undefined) {
+        window.alert('Opção inválida! O usuário não possui estatísticas no CS:GO. Por favor, verifique se o perfil está privado ou não mostra informações de jogo.')
+      } else {
+        this.appendaObjeto(this.amigoUm.playerstats.stats, this.dadosAmigoUm)
+      }
     })
     this.ss.obterSumario(idamigo1.value).subscribe((res: any) => {
       this.sumarioAmigoUm = res
     })
     this.ss.obterStatsUser(idamigo2.value).subscribe((res: any) => {
       this.amigoDois = res
-      this.statsAmigoDois = this.amigoDois.playerstats.stats
-      let stats_2 = this.statsAmigoDois
-      let listaDados_2 = this.dadosAmigoDois
-      this.appendaObjeto(stats_2, listaDados_2)
+      if (this.amigoUm.playerstats == undefined) {
+        window.alert('Opção inválida! O usuário não possui estatísticas no CS:GO. Por favor, verifique se o perfil está privado ou não mostra informações de jogo.')
+      } else {
+        this.appendaObjeto(this.amigoDois.playerstats.stats, this.dadosAmigoDois)
+      }
     })
     this.ss.obterSumario(idamigo2.value).subscribe((res: any) => {
       this.sumarioAmigoDois = res
@@ -74,15 +86,15 @@ export class EstatisticasComponent implements OnInit {
 
   // Funções chamáveis para encurtamento de código
 
-  appendaObjeto(stats: any, listaDados: StatsReais) {
+  appendaObjeto(stats: any, data: StatsReais) {
     for (let i = 0; i < 11; i++) {
       let variavel = stats.find((x: Stats) => x.name === this.listaStats[i]).value
-      listaDados[this.listaStats[i]] = variavel
+      data[this.listaStats[i]] = variavel
     }
-    listaDados['kd'] = this.calculaKD(stats)
-    listaDados['mapa_preferido'] = this.calculaMapa(stats)
-    listaDados['win_rate'] = this.calculaWinRate(stats)
-    this.dataSource = listaDados
+    data['kd'] = this.calculaKD(stats)
+    data['mapa_preferido'] = this.calculaMapa(stats)
+    data['win_rate'] = this.calculaWinRate(stats)
+    console.log(data)
   }
 
   calculaKD(stats: any) {

@@ -28,11 +28,6 @@ html {
     padding: 0;
 }
 
-#all {
-    margin-left: 200px;
-    margin-right: 200px;
-}
-
 #home-text-01 {
     font-family: CSFont;
     font-size: 50px;
@@ -184,11 +179,6 @@ footer {
         font-size: 25px;
     }
 
-    #all {
-        margin-left: 150px;
-        margin-right: 150px;
-    }
-
     #home-text-01 {
         padding: 200px 10px 200px 10px;
     }
@@ -243,11 +233,3 @@ footer {
         left: 0;
     }
 }
-
-#table-01 {
-    color: white
-}
-
-
-
-

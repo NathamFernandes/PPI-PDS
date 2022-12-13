@@ -45,12 +45,12 @@ O projeto está sendo realizado através do framework Angular, em sua versão 14
 
 A segunda delas, é a API da steam criada pelo discente, a qual se conecta à API fornecida pela steam e extrai apenas informações do CS:GO. O motivo pela utilização de uma API que extrai as informações de outra API está relacionado ao bloqueio do CORS, não implementado na API original. Por essa razão, a biblioteca [node-fetch](https://www.npmjs.com/package/node-fetch) cumpre a função da extração de dados anteriormente citada. Além disso, a biblioteca [steamapi](https://www.npmjs.com/package/steamapi) também converte nomes da steam em IDs, bem como mostra dados do usuário da Steam, de modo a complementar a API criada pelo discente.
 
-Ambas as APIs estão hospedadas no [Heroku](https://dashboard.heroku.com/), uma plataforma em nuvem para hospedagem de serviços.
+Ambas as APIs estão hospedadas na plataforma [Cyclic](https://www.cyclic.sh), uma plataforma em nuvem para hospedagem de serviços.
 
-Links para acessar as APIs hospedadas no Heroku:
+Links para acessar as APIs hospedadas no Cyclic:
 
-- *HLTV*: [api-hltv-natham.herokuapp.com](https://api-hltv-natham.herokuapp.com/)
-- *Steam*: [api-steam-natham.herokuapp.com](https://api-steam-natham.herokuapp.com/)
+- *HLTV*: [long-teal-beetle-wig.cyclic.app](https://long-teal-beetle-wig.cyclic.app)
+- *Steam*: [elated-gray-snaps.cyclic.app](https://elated-gray-snaps.cyclic.app)
 
 ## Metas atuais
 
@@ -58,9 +58,10 @@ Alguns dos objetivos a serem cumpridos em relação à aplicação.
 
 ### Home
 
-- Responsividade das DIVs
-- Organização dos textos
-- Organização das imagens
+- <s>Responsividade das DIVs</s>
+- <s>Organização dos textos</s>
+- <s>Organização das imagens</s>
+- Texto de recepção
 
 ### Competitivo
 
@@ -73,14 +74,13 @@ Alguns dos objetivos a serem cumpridos em relação à aplicação.
 
 ### Estatísticas 
 
-- Planejamento do design da página
 - <s>Mostrar foto de perfil do jogador</s>
 - <s>Validators</s>
 - <s>Mostrar perfil da steam do jogador</s>
+- Planejamento do design da página
+- Possível problema com API
 
 ### Comunidade
 
 - Fazer página de manutenção
     - *Aba de feedback (?)*
-
-https://answers.netlify.com/t/deploy-failed-today-build-was-terminated-build-script-returned-non-zero-exit-code-1/64450

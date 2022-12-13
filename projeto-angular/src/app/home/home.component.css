@@ -67,6 +67,13 @@
     margin-top: -2.5%;
 }
 
+    .container-box-right-2 {
+        width: 200px;
+        float: right;
+        padding-right: 3%;
+        margin-top: 0%;
+    }
+
 .container-box-left {
     width: 200px;
     float: left;
@@ -103,6 +110,9 @@
 
     .container-box-left {
         padding-top: 11%;
+    }
+    .container-box-right-2 {
+        padding-top: 0%;
     }
 }
 

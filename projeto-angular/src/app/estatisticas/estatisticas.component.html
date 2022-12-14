@@ -15,70 +15,67 @@
             incompleta ou desatualizada. Caso isto ocorra, por favor, pressione novamente o botão da consulta. Obrigado!
         </h2>
     </div>
-    <div id="div-01">
-        <h2 class="text-h2">MOSTRA STATS</h2>
-        <div class="relative">
-            <form [formGroup]="iduserForm">
-                <label for="iduser" style="color: white">ID do usuário:</label>
-                <input id="iduser" name="iduser" formControlName="iduser" type="string" #iduser>
-            </form>
-
-            <input type="button" value="Mostrar Estatísticas" [disabled]="!iduserForm.valid"
-                (click)="exibirDadosUser(iduser)">
-
+    <div class="teste-00">
+        <div class="teste01">
+            <h3>MOSTRA STATS</h3>
+            <p>Utilize a ferramenta para exibir as estatísticas do jogador selecionado. Para isso, utilize o ID do
+                jogador, localizado na URL do perfil em questão, como mostra os exemplos abaixo:</p>
+            <ul>
+                <li>https://steamcommunity.com/profiles/ <i>( ID da Steam )</i></li>
+                <li>https://steamcommunity.com/id/ <i>( Nome customizado )</i></li>
+            </ul>
             <img class="img-perfil" [src]="sumarioUsuario.avatar['large']">
-            <h1>{{ sumarioUsuario.nickname }}</h1>
+            <p class="nome">{{ sumarioUsuario.nickname }}</p>
+            <form class="formGroup" [formGroup]="iduserForm">
+                <input class="the-entry" id="iduser" name="iduser" formControlName="iduser" placeholder="ID DO USUÁRIO"
+                    type="string" #iduser>
+            </form>
+            <input class="the-button" type="button" value="Mostrar Estatísticas" [disabled]="!iduserForm.valid"
+                (click)="exibirDadosUser(iduser)">
         </div>
 
+        <div class="teste02">
+            <table id="table-01">
+                <tr>
+                    <td>Partidas jogadas</td>
+                    <td>{{ dados.total_matches_played }}</td>
+                </tr>
+                <tr>
+                    <td>Win Rate</td>
+                    <td>{{ dados.win_rate }}</td>
+                </tr>
+                <tr>
+                    <td>Kill/Death Ratio</td>
+                    <td>{{ dados.kd }}</td>
+                </tr>
+                <tr>
+                    <td>Kills</td>
+                    <td>{{ dados.total_kills }}</td>
+                </tr>
+                <tr>
+                    <td>Mortes</td>
+                    <td>{{ dados.total_deaths }}</td>
+                </tr>
+                <tr>
+                    <td>Kills de AWP</td>
+                    <td>{{ dados.total_kills_awp }}</td>
+                </tr>
+                <tr>
+                    <td>Kills de AK</td>
+                    <td>{{ dados.total_kills_ak47 }}</td>
+                </tr>
+                <tr>
+                    <td>Kills de M4</td>
+                    <td>{{ dados.total_kills_m4a1 }}</td>
+                </tr>
+                <tr>
+                    <td>Mapa mais jogado</td>
+                    <td>{{ dados.mapa_preferido }}</td>
+                </tr>
+            </table>
+        </div>
 
-
-
-        <!--       <th class="th-perfil"></th>
-
-        <td class="opcao">Nick</td>
-        <td class="resp" class="resp">{{ sumarioUsuario.nickname }}</td>
- -->
-        <table id="table-01">
-
-            <tr>
-                <td class="opcao">Partidas jogadas</td>
-                <td class="resp">{{ dados.total_matches_played }}</td>
-            </tr>
-            <tr>
-                <td class="opcao">Win Rate</td>
-                <td class="resp">{{ dados.win_rate }}</td>
-            </tr>
-            <tr>
-                <td class="opcao">K/D Ratio</td>
-                <td class="resp">{{ dados.kd }}</td>
-            </tr>
-            <tr>
-                <td class="opcao">Kills</td>
-                <td class="resp">{{ dados.total_kills }}</td>
-            </tr>
-            <tr>
-                <td class="opcao">Mortes</td>
-                <td class="resp">{{ dados.total_deaths }}</td>
-            </tr>
-            <tr>
-                <td class="opcao">Kills de AWP</td>
-                <td class="resp">{{ dados.total_kills_awp }}</td>
-            </tr>
-            <tr>
-                <td class="opcao">Kills de AK</td>
-                <td class="resp">{{ dados.total_kills_ak47 }}</td>
-            </tr>
-            <tr>
-                <td class="opcao">Kills de M4</td>
-                <td class="resp">{{ dados.total_kills_m4a1 }}</td>
-            </tr>
-            <tr>
-                <td class="opcao">Mapa preferido</td>
-                <td class="resp">{{ dados.mapa_preferido }}</td>
-            </tr>
-        </table>
     </div>
-
     <h1 style="color: white">COMPARA PLAYERS</h1>
 
     <form [formGroup]="idamigoForm">
@@ -93,13 +90,12 @@
         </div>
     </form>
 
-    <input type="button" value="Comparar" [disabled]="!idamigoForm.valid"
-        (click)="compararDadosAmigos(idamigo1, idamigo2)">
 
 
     <table id="table-01">
         <tr>
-            <th>X</th>
+            <th> <input type="button" value="Comparar" [disabled]="!idamigoForm.valid"
+                    (click)="compararDadosAmigos(idamigo1, idamigo2)"></th>
             <th class="th-perfil"><img class="img-perfil" [src]="sumarioAmigoUm.avatar['large']"></th>
             <th class="th-perfil"><img class="img-perfil" [src]="sumarioAmigoDois.avatar['large']"></th>
         </tr>
@@ -119,7 +115,7 @@
             <td>{{ dadosAmigoDois.win_rate }}</td>
         </tr>
         <tr>
-            <td>K/D Ratio</td>
+            <td>Kill/Death Ratio</td>
             <td>{{ dadosAmigoUm.kd }}</td>
             <td>{{ dadosAmigoDois.kd }}</td>
         </tr>
@@ -154,7 +150,6 @@
             <td>{{ dadosAmigoDois.mapa_preferido }}</td>
         </tr>
     </table>
-
 </body>
 
 </html>

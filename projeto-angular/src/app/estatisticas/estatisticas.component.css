@@ -1,46 +1,75 @@
 body td {
     border: solid grey 3px;
+    background-color: white;
+    padding: 10px;
     text-align: center;
-    font-family: Poppins;
-    font-size: 25px;
-
+    font-family: RobotoMono;
+    font-size: 35px;
 }
 
-#div-01 {
-    background-color: red;
-    height: 900px;
-    display: flex;
+body th {
+    border: solid grey 3px;
+    background-color: white;
+    text-align: center;
 }
 
-.text-h2 {
-    margin-left: 120px;
-    font-family: CSFont;
-    font-size: 60px;
+body p {
     color: white;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.relative {
-    margin-top: auto;
-    margin-bottom: auto;
+    font-family: Roboto;
+    margin-left: 20px;
+    margin-right: 20px;
     text-align: center;
-    padding-left: 170px;
-    padding-right: 170px;
+    padding-bottom: 10px;
+    font-size: 18px;
 }
 
-#table-01 {
-    margin-top: 7%;
-    margin-bottom: 7%;
-    border-collapse: collapse;
+body h3 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: CSFont;
+    font-size: 50px;
+    color: white;
 }
 
-.opcao {
-    background-color: rgb(211, 211, 211);
+.nome {
+    padding-top: 40px;
+    font-family: RobotoMono;
+    font-style: italic;
+    width: auto;
+    height: 20px;
 }
 
-.resp {
-    background-color: rgb(245, 188, 188);
+.formGroup {
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+.the-entry {
+    padding-left: px;
+    border-radius: 5px;
+}
+
+.the-entry::placeholder {
+    font-style: italic;
+    text-align: center;
+}
+
+.the-button {
+    color: black;
+    border: 2px solid #4CAF50;
+    font-family: Poppins;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+ul {
+    padding: 15px;
+}
+
+ul li {
+    list-style-type: circle;
+    color: white;
+    font-size: 18px;
 }
 
 .msg {
@@ -52,10 +81,45 @@ body td {
     text-align: center;
 }
 
+#table-01 {
+    font-size: 40px;
+    margin: auto;
+    border-collapse: collapse;
+}
 
-.img-perfil {
+.teste01 {
+    padding-left: 250px;
+    padding-top: 100px;
+    float: left;
+    text-align: center;
+    width: 52%;
+    height: 675px;
+}
+
+.teste02 {
+    padding-top: 50px;
+    padding-right: 170px;
+    float: right;
+    width: 48%;
+    height: auto;
+}
+
+.teste-00 {
+    height: 900px;
+    padding: 0px;
+    background-color: rgb(53, 49, 49);
+}
+
+.th-perfil {
     width: 181px;
     height: 181px;
+}
+
+.img-perfil {
+    margin-bottom: -5%;
+    width: 160px;
+    height: 160px;
+    border: solid white 3px;
     background-color: white;
 }
 

@@ -1,14 +1,46 @@
 body td {
     border: solid grey 3px;
-    background-color: white;
-    padding: 3px;
     text-align: center;
+    font-family: Poppins;
+    font-size: 25px;
+
 }
 
-body th {
-    border: solid grey 3px;
-    background-color: white;
+#div-01 {
+    background-color: red;
+    height: 900px;
+    display: flex;
+}
+
+.text-h2 {
+    margin-left: 120px;
+    font-family: CSFont;
+    font-size: 60px;
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.relative {
+    margin-top: auto;
+    margin-bottom: auto;
     text-align: center;
+    padding-left: 170px;
+    padding-right: 170px;
+}
+
+#table-01 {
+    margin-top: 7%;
+    margin-bottom: 7%;
+    border-collapse: collapse;
+}
+
+.opcao {
+    background-color: rgb(211, 211, 211);
+}
+
+.resp {
+    background-color: rgb(245, 188, 188);
 }
 
 .msg {
@@ -20,17 +52,11 @@ body th {
     text-align: center;
 }
 
-#table-01 {
-    font-size: 40px;
-}
-
-.th-perfil {
-    width: 181px;
-    height: 181px;
-}
 
 .img-perfil {
-    margin-bottom: -5%;
+    width: 181px;
+    height: 181px;
+    background-color: white;
 }
 
 @media (max-width: 500px) {

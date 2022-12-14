@@ -1,10 +1,10 @@
 body td {
-    border: solid grey 3px;
-    background-color: white;
+    border: solid black 3px;
+    background-color: rgb(173, 173, 173);
     padding: 10px;
     text-align: center;
     font-family: RobotoMono;
-    font-size: 35px;
+    font-size: 32px;
 }
 
 body th {
@@ -56,7 +56,7 @@ body h3 {
 
 .the-button {
     color: black;
-    border: 2px solid #4CAF50;
+    border: 3px solid #b16767;
     font-family: Poppins;
     padding: 4px;
     border-radius: 10px;
@@ -64,6 +64,7 @@ body h3 {
 
 ul {
     padding: 15px;
+
 }
 
 ul li {
@@ -87,27 +88,57 @@ ul li {
     border-collapse: collapse;
 }
 
-.teste01 {
+.quadrante01 {
     padding-left: 250px;
-    padding-top: 100px;
+    padding-top: 120px;
     float: left;
     text-align: center;
     width: 52%;
     height: 675px;
 }
 
-.teste02 {
-    padding-top: 50px;
+.quadrante02 {
+    padding-top: 90px;
     padding-right: 170px;
     float: right;
     width: 48%;
     height: auto;
 }
 
-.teste-00 {
-    height: 900px;
+.quadrante03 {
+    padding-right: 250px;
+    padding-top: 120px;
+    float: right;
+    text-align: center;
+    width: 52%;
+    height: 675px;
+    background-color: blue;
+}
+
+.quadrante04 {
+    padding-top: 70px;
+    padding-left: 170px;
+    float: left;
+    width: 48%;
+    height: auto;
+    background-color: red;
+}
+
+
+.divisao-primeira {
+    height: 800px;
     padding: 0px;
     background-color: rgb(53, 49, 49);
+}
+
+.divisao-segunda {
+    height: 900px;
+    padding: 0px;
+    background-color: rgb(76, 68, 68);
+}
+
+.td-gray {
+    background-color: gray;
 }
 
 .th-perfil {
@@ -120,7 +151,7 @@ ul li {
     width: 160px;
     height: 160px;
     border: solid white 3px;
-    background-color: white;
+    background-color: rgb(173, 173, 173);
 }
 
 @media (max-width: 500px) {

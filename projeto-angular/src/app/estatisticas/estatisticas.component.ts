@@ -62,7 +62,7 @@ export class EstatisticasComponent implements OnInit {
   compararDadosAmigos(idamigo1: HTMLInputElement, idamigo2: HTMLInputElement): void {
     this.ss.obterStatsUser(idamigo1.value).subscribe((res: any) => {
       this.amigoUm = res
-      if (this.amigoUm.playerstats == undefined) {
+      if (this.amigoUm.playerstats == undefined || this.amigoDois.playerstats == undefined) {
         window.alert('Opção inválida! O usuário não possui estatísticas no CS:GO. Por favor, verifique se o perfil está privado ou não mostra informações de jogo.')
       } else {
         this.appendaObjeto(this.amigoUm.playerstats.stats, this.dadosAmigoUm)
@@ -73,7 +73,7 @@ export class EstatisticasComponent implements OnInit {
     })
     this.ss.obterStatsUser(idamigo2.value).subscribe((res: any) => {
       this.amigoDois = res
-      if (this.amigoUm.playerstats == undefined) {
+      if (this.amigoUm.playerstats == undefined || this.amigoDois.playerstats == undefined) {
         window.alert('Opção inválida! O usuário não possui estatísticas no CS:GO. Por favor, verifique se o perfil está privado ou não mostra informações de jogo.')
       } else {
         this.appendaObjeto(this.amigoDois.playerstats.stats, this.dadosAmigoDois)

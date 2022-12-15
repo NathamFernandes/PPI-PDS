@@ -93,6 +93,9 @@
                 <p class="nickname-both">{{ sumarioAmigoUm.nickname }}</p>
             </div>
             <div class="img-both">
+                <p>X</p>
+            </div>
+            <div class="img-both">
                 <img class="img-perfil" [src]="sumarioAmigoDois.avatar['large']">
                 <p class="nickname-both">{{ sumarioAmigoDois.nickname }}</p>
             </div>
@@ -115,6 +118,11 @@
 
         <div class="quadrante04">
             <table class="tabela-stats">
+                <tr>
+                    <td>{{ sumarioAmigoUm.nickname }}</td>
+                    <td>VS</td>
+                    <td>{{ sumarioAmigoDois.nickname }}</td>
+                </tr>
                 <tr>
                     <td>{{ dadosAmigoUm.total_matches_played }}</td>
                     <td>Partidas jogadas</td>

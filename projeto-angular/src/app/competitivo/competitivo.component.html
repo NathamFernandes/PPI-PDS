@@ -7,11 +7,40 @@
     <title>CSBRASIL</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' href='competitivo.component.css'>
+    <script src="./script-test.js"></script>
 </head>
 
 <body>
+    <h3>TIMES BRASILEIROS</h3>
+    <div id="div-times-brasil">
+        <div id="imagem-times-brasil">
+            <a href="https://google.com">
+                <img id="team-nation" class="brazilteams" src="../../assets/img/imagem-nation-branca.png">
+            </a>
+        </div>
+        <div id="imagem-times-brasil">
+            <img id="team-imperial" class="brazilteams" src="../../assets/img/imagem-imperial.webp">
+        </div>
+        <div id="imagem-times-brasil">
+            <img id="team-furia" class="brazilteams" src="../../assets/img/imagem-furia.png">
+        </div>
+    </div>
+    <div id="div-times-brasil">
+        <div id="imagem-times-brasil">
+            <p id="legenda-times-brasil">00NATION</p>
+        </div>
+        <div id="imagem-times-brasil">
+            <p id="legenda-times-brasil">IMPERIAL</p>
+        </div>
+        <div id="imagem-times-brasil">
+            <p id="legenda-times-brasil">FURIA</p>
+        </div>
+    </div>
+    <div id="test">
+
+    </div>
     <div style="color: white; padding-bottom: 50px;" *ngFor="let noticia of noticias"> 
-        <h3>Noticia: {{ noticia.title }}</h3>
+        <h4>Noticia: {{ noticia.title }}</h4>
     </div>
     <!-- LISTA DE 30 MELHORES JOGADORES -->
     <div style="color: white; padding-bottom: 50px;" *ngFor="let player of listaJogadores | slice:0:30; let i=index">

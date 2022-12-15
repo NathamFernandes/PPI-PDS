@@ -10,8 +10,8 @@
 </head>
 
 <body>
-    <div class="msg">
-        <h2 class="msg-h2">Por motivos de problemas na API externa da Steam, a exibição de estatísticas pode aparecer
+    <div class="mensagem-alerta">
+        <h2>Por motivos de problemas na API externa da Steam, a exibição de estatísticas pode aparecer
             incompleta ou desatualizada. Caso isto ocorra, por favor, pressione novamente o botão da consulta. Obrigado!
         </h2>
     </div>
@@ -21,11 +21,13 @@
             <p>Utilize a ferramenta para exibir as estatísticas do jogador selecionado. Para isso, utilize o ID do
                 jogador, localizado na URL do perfil em questão, como mostra os exemplos abaixo:</p>
             <ul>
-                <li>https://steamcommunity.com/profiles/ <i>( ID da Steam )</i></li>
-                <li>https://steamcommunity.com/id/ <i>( Nome customizado )</i></li>
+                <li>https://steamcommunity.com/profiles/(ID da Steam)</li>
+                <li>https://steamcommunity.com/id/(Nome customizado)</li>
             </ul>
-            <img class="img-perfil" [src]="sumarioUsuario.avatar['large']">
-            <p class="nome">{{ sumarioUsuario.nickname }}</p>
+            <object >
+                <img class="img-perfil" [src]="sumarioUsuario.avatar['large']">
+            </object>
+            <p class="nickname">{{ sumarioUsuario.nickname }}</p>
             <form class="formGroup" [formGroup]="iduserForm">
                 <input class="the-entry" id="iduser" name="iduser" formControlName="iduser" placeholder="ID DO USUÁRIO"
                     type="string" #iduser>
@@ -35,7 +37,7 @@
         </div>
 
         <div class="quadrante02">
-            <table id="table-01">
+            <table class="tabela-stats">
                 <tr>
                     <td>Partidas jogadas</td>
                     <td>{{ dados.total_matches_played }}</td>
@@ -83,16 +85,19 @@
             <p>Utilize a ferramenta para exibir as estatísticas do jogador selecionado. Para isso, utilize o ID do
                 jogador, localizado na URL do perfil em questão, como mostra os exemplos abaixo:</p>
             <ul>
-                <li>https://steamcommunity.com/profiles/ <i>( ID da Steam )</i></li>
-                <li>https://steamcommunity.com/id/ <i>( Nome customizado )</i></li>
+                <li>https://steamcommunity.com/profiles/(ID da Steam)</li>
+                <li>https://steamcommunity.com/id/(nome customizado)</li>
             </ul>
-            <input type="button" value="Comparar" [disabled]="!idamigoForm.valid"
-                (click)="compararDadosAmigos(idamigo1, idamigo2)">
-            <img class="img-perfil" [src]="sumarioAmigoUm.avatar['large']">
-            <img class="img-perfil" [src]="sumarioAmigoDois.avatar['large']">
-                <p class="nome">{{ sumarioAmigoUm.nickname }}</p>
-                <p class="nome">{{ sumarioAmigoDois.nickname }}</p>
-            <form [formGroup]="idamigoForm">
+            <div class="img-both">
+                <img class="img-perfil" [src]="sumarioAmigoUm.avatar['large']">
+                <p class="nickname-both">{{ sumarioAmigoUm.nickname }}</p>
+            </div>
+            <div class="img-both">
+                <img class="img-perfil" [src]="sumarioAmigoDois.avatar['large']">
+                <p class="nickname-both">{{ sumarioAmigoDois.nickname }}</p>
+            </div>
+
+            <form class="formGroup" [formGroup]="idamigoForm">
 
                 <div>
                     <input class="the-entry" id="idamigo1" name="idamigo1" formControlName="idamigo1"
@@ -104,10 +109,12 @@
                         placeholder="ID DO JOGADOR 2" type="string" #idamigo2>
                 </div>
             </form>
+            <input class="the-button" type="button" value="Comparar" [disabled]="!idamigoForm.valid"
+                (click)="compararDadosAmigos(idamigo1, idamigo2)">
         </div>
 
         <div class="quadrante04">
-            <table id="table-01">
+            <table class="tabela-stats">
                 <tr>
                     <td>{{ dadosAmigoUm.total_matches_played }}</td>
                     <td>Partidas jogadas</td>

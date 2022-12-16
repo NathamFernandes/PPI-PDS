@@ -10,6 +10,11 @@ import { EstatisticasComponent } from './estatisticas/estatisticas.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ComunidadeComponent } from './comunidade/comunidade.component';
 import { IndisponivelComponent } from './indisponivel/indisponivel.component';
+import { FuriaComponent } from './times-brasileiros/furia/furia.component';
+import { ImperialComponent } from './times-brasileiros/imperial/imperial.component';
+import { NationComponent } from './times-brasileiros/nation/nation.component';
+import { PainComponent } from './times-brasileiros/pain/pain.component';
+import { FluxoComponent } from './times-brasileiros/fluxo/fluxo.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +23,12 @@ import { IndisponivelComponent } from './indisponivel/indisponivel.component';
     CompetitivoComponent,
     EstatisticasComponent,
     ComunidadeComponent,
-    IndisponivelComponent
+    IndisponivelComponent,
+    FuriaComponent,
+    ImperialComponent,
+    NationComponent,
+    PainComponent,
+    FluxoComponent
   ],
   imports: [
     BrowserModule,

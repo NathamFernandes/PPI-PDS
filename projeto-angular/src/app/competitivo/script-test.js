@@ -1,3 +1,3 @@
 function chbg(color) {
-    document.getElementById('test').style.backgroundColor = red;
-} 
+    document.getElementById('jogador-01').style.backgroundColor = color;
+}  

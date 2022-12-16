@@ -46,4 +46,6 @@ export class CompetitivoComponent implements OnInit {
       this.JogadorID = res
     })
   }
+
+  
 }

@@ -7,39 +7,50 @@
     <title>CSBRASIL</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' href='competitivo.component.css'>
-    <script src="./script-test.js"></script>
 </head>
 
 <body>
     <h3>TIMES BRASILEIROS</h3>
-    <div id="div-times-brasil">
-        <div id="imagem-times-brasil">
-            <a href="https://google.com">
-                <img id="team-nation" class="brazilteams" src="../../assets/img/imagem-nation-branca.png">
-            </a>
-        </div>
-        <div id="imagem-times-brasil">
-            <img id="team-imperial" class="brazilteams" src="../../assets/img/imagem-imperial.webp">
-        </div>
-        <div id="imagem-times-brasil">
-            <img id="team-furia" class="brazilteams" src="../../assets/img/imagem-furia.png">
-        </div>
-    </div>
-    <div id="div-times-brasil">
-        <div id="imagem-times-brasil">
+    <div id="time-nation">
+        <a href="/nation">
+            <img class="brazilteams" src="../../assets/img/times-brasileiros/imagem-nation-branca.png">
             <p id="legenda-times-brasil">00NATION</p>
-        </div>
-        <div id="imagem-times-brasil">
+        </a>
+    </div>
+    <div id="time-imperial">
+        <a href="/imperial">
+            <img class="brazilteams" src="../../assets/img/times-brasileiros/imagem-imperial.webp">
             <p id="legenda-times-brasil">IMPERIAL</p>
-        </div>
-        <div id="imagem-times-brasil">
+        </a>
+    </div>
+    <div id="time-furia">
+        <a href="/furia">
+            <img class="brazilteams" src="../../assets/img/times-brasileiros/imagem-furia.png">
             <p id="legenda-times-brasil">FURIA</p>
-        </div>
+        </a>
     </div>
-    <div id="test">
+    <div id="time-pain">
+        <a href="/pain">
+            <img class="brazilteams" src="../../assets/img/times-brasileiros/imagem-pain.png">
+            <p id="legenda-times-brasil">PAIN</p>
+        </a>
+    </div>
+    <div id="time-fluxo">
+        <a href="/fluxo">
+            <img class="brazilteams" src="../../assets/img/times-brasileiros/imagem-fluxo.png">
+            <p id="legenda-times-brasil">FLUXO</p>
+        </a>
+    </div>
+    <div></div>
+    <div id="jogador-01">
+        <div id="teste"></div>
+    </div>
+    <div id="jogador-02"></div>
+    <div id="jogador-03"></div>
+    <div id="jogador-04"></div>
+    <div id="jogador-05"></div>
 
-    </div>
-    <div style="color: white; padding-bottom: 50px;" *ngFor="let noticia of noticias"> 
+    <div style="color: white; padding-bottom: 50px;" *ngFor="let noticia of noticias">
         <h4>Noticia: {{ noticia.title }}</h4>
     </div>
     <!-- LISTA DE 30 MELHORES JOGADORES -->
@@ -64,7 +75,7 @@
     </div>
     <input type="button" value="Procurar" (click)="exibirDadosJogadorID(idplayer)">
 
-    <div style="color: white;"  >
+    <div style="color: white;">
         <h2>ID: {{JogadorID.id}}</h2>
         <p>Kills: {{JogadorID.nickname }} </p>
         <p>Kills: {{JogadorID.kd }} </p>

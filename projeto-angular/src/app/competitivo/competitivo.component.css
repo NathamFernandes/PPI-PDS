@@ -90,210 +90,116 @@ body h3 {
     transition: all 0.3s;
 }
 
-#jogador-01 {
+#jogador-01,
+#jogador-02,
+#jogador-03,
+#jogador-04,
+#jogador-05 {
     height: 500px;
+    width: 20%;
+    display: inline-block;
+    background-repeat: no-repeat;
 }
 
 #time-nation:hover~#jogador-01 {
     background-image: url(../../assets/img/jogadores-nation/coldzera.png);
-    background-repeat: no-repeat;
-    width: 20%;
-    height: 500px;
-    display: inline-block;
 }
 
 #time-nation:hover~#jogador-02 {
     background-image: url(../../assets/img/jogadores-nation/taco.png);
-    background-repeat: no-repeat;
-    width: 20%;
-    height: 500px;
-    display: inline-block;
 }
 
 #time-nation:hover~#jogador-03 {
     background-image: url(../../assets/img/jogadores-nation/dumau.png);
-    background-repeat: no-repeat;
-    width: 20%;
-    height: 500px;
-    display: inline-block;
 }
 
 #time-nation:hover~#jogador-04 {
     background-image: url(../../assets/img/jogadores-nation/latto.png);
-    background-repeat: no-repeat;
-    width: 20%;
-    height: 500px;
-    display: inline-block;
 }
 
 #time-nation:hover~#jogador-05 {
     background-image: url(../../assets/img/jogadores-nation/try.png);
-    background-repeat: no-repeat;
-    width: 20%;
-    height: 500px;
-    display: inline-block;
 }
 
 #time-imperial:hover~#jogador-01 {
     background-image: url(../../assets/img/jogadores-imperial/fallen.png);
-    background-repeat: no-repeat;
-    width: 20%;
-    height: 500px;
-    display: inline-block;
 }
 
 #time-imperial:hover~#jogador-02 {
     background-image: url(../../assets/img/jogadores-imperial/fer.png);
-    background-repeat: no-repeat;
-    width: 20%;
-    height: 500px;
-    display: inline-block;
 }
 
 #time-imperial:hover~#jogador-03 {
     background-image: url(../../assets/img/jogadores-imperial/boltz.png);
-    background-repeat: no-repeat;
-    width: 20%;
-    height: 500px;
-    display: inline-block;
 }
 
 #time-imperial:hover~#jogador-04 {
     background-image: url(../../assets/img/jogadores-imperial/chelo.png);
-    background-repeat: no-repeat;
-    width: 20%;
-    height: 500px;
-    display: inline-block;
 }
 
 #time-imperial:hover~#jogador-05 {
     background-image: url(../../assets/img/jogadores-imperial/vini.png);
-    background-repeat: no-repeat;
-    width: 20%;
-    height: 500px;
-    display: inline-block;
 }
 
 #time-furia:hover~#jogador-01 {
     background-image: url(../../assets/img/jogadores-furia/art.png);
-    background-repeat: no-repeat;
-    width: 20%;
-    height: 500px;
-    display: inline-block;
 }
 
 #time-furia:hover~#jogador-02 {
     background-image: url(../../assets/img/jogadores-furia/yuurih.png);
-    background-repeat: no-repeat;
-    width: 20%;
-    height: 500px;
-    display: inline-block;
 }
 
 #time-furia:hover~#jogador-03 {
     background-image: url(../../assets/img/jogadores-furia/kscerato.png);
-    background-repeat: no-repeat;
-    width: 20%;
-    height: 500px;
-    display: inline-block;
 }
 
 #time-furia:hover~#jogador-04 {
     background-image: url(../../assets/img/jogadores-furia/saffee.png);
-    background-repeat: no-repeat;
-    width: 20%;
-    height: 500px;
-    display: inline-block;
 }
 
 #time-furia:hover~#jogador-05 {
     background-image: url(../../assets/img/jogadores-furia/drop.png);
-    background-repeat: no-repeat;
-    width: 20%;
-    height: 500px;
-    display: inline-block;
 }
 
 #time-pain:hover~#jogador-01 {
     background-image: url(../../assets/img/jogadores-pain/pkl.png);
-    background-repeat: no-repeat;
-    width: 20%;
-    height: 500px;
-    display: inline-block;
 }
 
 #time-pain:hover~#jogador-02 {
     background-image: url(../../assets/img/jogadores-pain/hardzao.png);
-    background-repeat: no-repeat;
-    width: 20%;
-    height: 500px;
-    display: inline-block;
 }
 
 #time-pain:hover~#jogador-03 {
     background-image: url(../../assets/img/jogadores-pain/biguzera.png);
-    background-repeat: no-repeat;
-    width: 20%;
-    height: 500px;
-    display: inline-block;
 }
 
 #time-pain:hover~#jogador-04 {
     background-image: url(../../assets/img/jogadores-pain/skullz.png);
-    background-repeat: no-repeat;
-    width: 20%;
-    height: 500px;
-    display: inline-block;
 }
 
 #time-pain:hover~#jogador-05 {
     background-image: url(../../assets/img/jogadores-pain/zevy.png);
-    background-repeat: no-repeat;
-    width: 20%;
-    height: 500px;
-    display: inline-block;
 }
 
 #time-fluxo:hover~#jogador-01 {
     background-image: url(../../assets/img/jogadores-fluxo/felps.png);
-    background-repeat: no-repeat;
-    width: 20%;
-    height: 500px;
-    display: inline-block;
 }
 
 #time-fluxo:hover~#jogador-02 {
     background-image: url(../../assets/img/jogadores-fluxo/wood7.png);
-    background-repeat: no-repeat;
-    width: 20%;
-    height: 500px;
-    display: inline-block;
 }
 
 #time-fluxo:hover~#jogador-03 {
     background-image: url(../../assets/img/jogadores-fluxo/vsm.png);
-    background-repeat: no-repeat;
-    width: 20%;
-    height: 500px;
-    display: inline-block;
 }
 
 #time-fluxo:hover~#jogador-04 {
     background-image: url(../../assets/img/jogadores-fluxo/lucaozy.png);
-    background-repeat: no-repeat;
-    width: 20%;
-    height: 500px;
-    display: inline-block;
 }
 
 #time-fluxo:hover~#jogador-05 {
     background-image: url(../../assets/img/jogadores-fluxo/lux.png);
-    background-repeat: no-repeat;
-    width: 20%;
-    height: 500px;
-    display: inline-block;
 }
-
 
 #legenda-times-brasil {
     font-family: Agency FB;

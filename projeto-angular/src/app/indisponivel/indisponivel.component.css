@@ -1,0 +1,22 @@
+h2 {
+    font-size: 50px;
+    font-family: CSFont;
+    color: white;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    padding-top: 300px;
+    padding-bottom: 40px;
+    line-height: 60px;
+}
+
+img {
+    height: 20%;
+    width: 20%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

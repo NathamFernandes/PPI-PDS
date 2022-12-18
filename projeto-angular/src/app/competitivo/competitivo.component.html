@@ -50,10 +50,8 @@
     <div id="jogador-04"></div>
     <div id="jogador-05"></div>
 
-    <div style="color: white; padding-bottom: 50px;" *ngFor="let noticia of noticias">
-        <h4>Noticia: {{ noticia.title }}</h4>
-    </div>
-    <!-- LISTA DE 30 MELHORES JOGADORES -->
+
+    <!-- LISTA DE 30 MELHORES JOGADORES 
     <div style="color: white; padding-bottom: 50px;" *ngFor="let player of listaJogadores | slice:0:30; let i=index">
         <h2>ID: {{ player.id }}</h2>
         <p>Team: {{ player.team }}</p>
@@ -63,24 +61,42 @@
         <p>Rating: {{ player.rating }}</p>
     </div>
 
-    <!-- LISTA DE 30 MELHORES TIMES -->
+    LISTA DE 30 MELHORES TIMES 
     <div style="color: white; padding-bottom: 30px;" *ngFor="let team of listaTimes">
         <h2>ID: {{ team.name }}</h2>
     </div>
+-->
 
     <!-- OBJETO COM JOGADOR PELO ID -->
-    <div style="color: white;">
-        <label for="idplayer" style="color: white">ID do usuário:</label>
-        <input id="idplayer" name="idplayer" type="number" #idplayer>
+    <h3>PROCURAR JOGADOR</h3>
+    <div class="quadrante-com-01">
+        <p>Utilize a ferramenta para exibir as estatísticas do jogador selecionado. Para isso, utilize o ID do
+            jogador, localizado na URL do perfil em questão, como mostra os exemplos abaixo:</p>
+        <div style="color: white;">
+            <label for="idplayer" style="color: white">ID do usuário:</label>
+            <input id="idplayer" name="idplayer" type="number" #idplayer>
+        </div>
+        <input type="button" value="Procurar" (click)="exibirDadosJogadorID(idplayer)">
     </div>
-    <input type="button" value="Procurar" (click)="exibirDadosJogadorID(idplayer)">
 
-    <div style="color: white;">
-        <h2>ID: {{JogadorID.id}}</h2>
-        <p>Kills: {{JogadorID.nickname }} </p>
-        <p>Kills: {{JogadorID.kd }} </p>
+    <div></div>
+    <div id="info-jogador">
+        <div id="info-jogador-header">
+            <h2>{{ JogadorID.nickname }}({{ JogadorID.id }})</h2>
+        </div>
+        <div id="info-jogador-body">
+            <h2>Idade: {{ JogadorID.age }} </h2>
+            <h2>Time: {{ JogadorID.team.name }} ({{ JogadorID.team.id }})</h2>
+            <h2>Rating: {{ JogadorID.rating }} </h2>
+            <h2>Mapas Jogados: {{ JogadorID.mapsPlayed }} </h2>
+        </div>
+    </div>
+    <div id="img-jogador">
+        <img [src]="JogadorID.image">
     </div>
 
+
+    <h3>PROCURAR TIME</h3>
     <!-- OBJETO COM TIME PELO ID -->
     <div style="color: white; padding-bottom: 200px;">
         <label for="idteam" style="color: white">ID do usuário:</label>
@@ -92,6 +108,11 @@
         <h2>ID: {{ TimeID.name }}</h2>
     </div>
 
+    <h3>NOTÍCIAS</h3>
+    <div id="div-noticias" *ngFor="let noticia of noticias">
+        <a href="{{ noticia.link }}">{{ noticia.title }}. {{ noticia.description }}</a>
+    </div>
+    <br>
 </body>
 
 </html>

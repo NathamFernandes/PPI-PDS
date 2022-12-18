@@ -9,7 +9,7 @@ export class ApihltvService {
 
   constructor(private http: HttpClient) { }
 
-  obterNoticias() {
+  obterNoticias() : Observable<any> {
     let URL = 'https://long-teal-beetle-wig.cyclic.app/noticias'
     return this.http.get(URL);
   }

@@ -1,3 +1,7 @@
+body {
+    color: white;
+}
+
 body h3 {
     font-family: CSFont;
     font-size: 50px;
@@ -5,6 +9,25 @@ body h3 {
     margin: auto;
     text-align: center;
     padding: 40px;
+}
+
+body p {
+    color: white;
+    font-family: Roboto;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+
+a {
+    color: white;
+    font-size: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 #imagem-csbrasil-paginas {
@@ -207,4 +230,56 @@ body h3 {
     font-weight: bolder;
     color: white;
     padding: 20px;
+}
+
+#div-noticias {
+    width: 290px;
+    height: 200px;
+    background-color: rgb(85, 85, 85);
+    display: inline-flex;
+    text-align: center;
+    padding: 10px;
+    margin-left: 75px;
+    padding-top: 15px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.quadrante-com-01 {
+    padding-left: 150px;
+    padding-top: 150px;
+    float: left;
+    text-align: center;
+    width: 40%;
+    height: 700px;
+    background-color: red;
+}
+
+#info-jogador {
+    float: left;
+    color: white;
+    background-color: aqua;
+    height: 700px;
+    width: 30%;
+}
+
+#info-jogador-header {
+    padding-top: 20px;
+    text-align: center;
+}
+
+#info-jogador-body {
+    padding-top: 200px;
+    padding-left: 170px;
+}
+
+
+
+#img-jogador {
+    padding-top: 100px;
+    float: right;
+    color: white;
+    background-color: orange;
+    height: 700px;
+    width: 30%;
 }

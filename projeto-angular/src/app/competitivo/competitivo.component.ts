@@ -1,6 +1,7 @@
-import { TopTimes } from './../model/toptimes';
+import { Noticia } from '../model/hltv-ts/noticia';
+import { Time } from '../model/hltv-ts/time';
 import { ApihltvService } from './../model/apihltv.service';
-import { CompPlayer } from '../model/compplayer';
+import { PlayerComp } from '../model/hltv-ts/playercomp';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,17 +10,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./competitivo.component.css']
 })
 export class CompetitivoComponent implements OnInit {
-  listaJogadores: CompPlayer[];
-  listaTimes: TopTimes[];
-  JogadorID: CompPlayer;
-  TimeID: TopTimes;
-  noticias: any;
+  listaJogadores: PlayerComp[];
+  listaTimes: Time[];
+  JogadorID: PlayerComp;
+  TimeID: Time;
+  noticias: Noticia[];
 
   constructor(private hs: ApihltvService) {
     this.listaJogadores = [];
     this.listaTimes = [];
-    this.JogadorID = new CompPlayer;
-    this.TimeID = new TopTimes;
+    this.JogadorID = new PlayerComp;
+    this.TimeID = new Time;
     this.noticias = [];
   }
 

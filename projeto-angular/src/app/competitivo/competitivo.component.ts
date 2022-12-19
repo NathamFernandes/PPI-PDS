@@ -15,6 +15,7 @@ export class CompetitivoComponent implements OnInit {
   JogadorID: PlayerComp;
   TimeID: Time;
   noticias: Noticia[];
+  data = new Date;
 
   constructor(private hs: ApihltvService) {
     this.listaJogadores = [];

@@ -108,7 +108,7 @@
         <h2>ID: {{ TimeID.name }}</h2>
     </div>
 
-    <h3>NOTÍCIAS</h3>
+    <h3>NOTÍCIAS ({{ data.getDate() }}/{{ data.getMonth() + 1 }}/{{ data.getFullYear() }})</h3>
     <div id="div-noticias" *ngFor="let noticia of noticias">
         <a href="{{ noticia.link }}">{{ noticia.title }}. {{ noticia.description }}</a>
     </div>

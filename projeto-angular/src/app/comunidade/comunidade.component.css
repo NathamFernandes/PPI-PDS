@@ -1,3 +1,34 @@
 body {
+    color: rgb(226, 226, 226);
+    font-family: Poppins;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+body h3 {
+    padding: 30px;
+    font-family: CSFont;
+    font-size: 50px;
     color: white;
+    text-align: center;
+}
+
+body p {
+    font-size: 20px;
+    padding: 20px;
+    text-align: justify;
+}
+
+body h4 {
+    font-size: 30px;
+    padding: 20px;
+}
+
+a {
+    color: crimson;
+}
+
+a:hover {
+    color: rgb(221, 77, 106);
+    text-decoration: underline;
 }

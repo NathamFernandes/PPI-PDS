@@ -56,31 +56,7 @@ Links para acessar as APIs hospedadas no Cyclic:
 
 Alguns dos objetivos a serem cumpridos em relação à aplicação.
 
-### Home
-
-- <s>Responsividade das DIVs</s>
-- <s>Organização dos textos</s>
-- <s>Organização das imagens</s>
-- Texto de recepção
-
-### Competitivo
-
-- Planejamento do design da página
-- Escolher estatísticas apresentadas
-- Validators
-- Incluir times brasileiros
-- Mostrar foto do time e jogador
-    - *Perfil da steam (?)*
-
-### Estatísticas 
-
-- <s>Mostrar foto de perfil do jogador</s>
-- <s>Validators</s>
-- <s>Mostrar perfil da steam do jogador</s>
-- Planejamento do design da página
-- Possível problema com API
-
-### Comunidade
-
-- Fazer página de manutenção
-    - *Aba de feedback (?)*
+- Organizar a página Competitivo
+- Validadores do competitivo
+- Organizar a página Comunidade
+- Responsividade das páginas

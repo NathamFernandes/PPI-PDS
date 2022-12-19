@@ -32,3 +32,15 @@ a:hover {
     color: rgb(221, 77, 106);
     text-decoration: underline;
 }
+
+#imagens-compo {
+    margin-top: 100px;
+    width: auto;
+    height: 600px;
+}
+
+img {
+    width: 300px;
+    height: 400px;
+    padding: 20px;
+}

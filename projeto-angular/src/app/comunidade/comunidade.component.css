@@ -36,41 +36,119 @@ a:hover {
 #imagens-compo {
     margin-top: 100px;
     width: auto;
-    height: 600px;
+    height: auto;
 }
 
 img {
     width: 300px;
     height: 400px;
     padding: 20px;
+
 }
 
 #div-esquerda {
-    background-color: red;
     width: 33.3%;
     display: inline-flex;
+    margin: auto;
 }
 
 #div-meio {
-    background-color: yellow;
     width: 33.3%;
     display: inline-flex;
+    text-align: center;
 }
 
 #div-direita {
-    background-color: aqua;
     width: 33.3%;
     display: inline-flex;
+    text-align: center;
 }
 
-#img-esquerda {
-    float: left;
+#img-esquerda, #img-meio, #img-direita {
+    margin: auto ;
 }
 
-#img-meio {
-    margin: auto
+#p-de-img {
+    text-align: center;    
+    font-style: italic;
+    font-size: medium;
+    padding: 10px;
 }
 
-#img-direito {
+#legenda-esquerda {
+    width: 33.3%;
+    flex: 1;
+}
+
+#legenda-meio {
+    width: 33.3%;
+    display: table-cell;
+}
+
+#legenda-direita {
+    width: 33.3%;
+    display: table-cell;
+}
+
+#legendas-campo {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+#logo-if {
     float: right;
+    width: 350px;
+    height: 350px;
+}
+
+@media (max-width: 1152px) {
+    img {
+        width: 220px;
+        height: 300px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 769px) {
+    img {
+        width: 180px;
+        height: 230px;
+        padding: 20px;
+    }
+
+    #p-de-img {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 620px) {
+    #logo-if {
+        width: 200px;
+        height: 200px;
+    }
+
+    body {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    img {
+        width: 150px;
+        height: 200px;
+        padding: 20px;
+    }
+
+    #imagens-compo {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 514px) {
+    #logo-if {
+        display: none;
+    }
+
+    body p {
+        font-size: 15px;
+    }
 }

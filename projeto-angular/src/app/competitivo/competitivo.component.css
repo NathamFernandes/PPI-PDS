@@ -11,6 +11,11 @@ body h3 {
     padding: 40px;
 }
 
+body h2 {
+    font-size: 30px;
+    line-height: 35px;
+}
+
 body p {
     color: white;
     font-family: Roboto;
@@ -19,6 +24,12 @@ body p {
     text-align: center;
     padding-bottom: 10px;
     font-size: 18px;
+}
+
+body h4 {
+    font-style: italic;
+    font-size: 25px;
+    padding-top: 15px;
 }
 
 a {
@@ -246,40 +257,50 @@ a:hover {
 }
 
 .quadrante-com-01 {
-    padding-left: 150px;
-    padding-top: 150px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 200px;
     float: left;
     text-align: center;
     width: 40%;
-    height: 700px;
-    background-color: red;
+    height: 600px;
+    background-color: rgb(80, 80, 80);
+    border: 3px solid rgb(158, 158, 158);
+}
+
+#primeira-margem {
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
 #info-jogador {
     float: left;
     color: white;
-    background-color: aqua;
-    height: 700px;
+    height: 600px;
     width: 30%;
+    background-color: rgb(41, 41, 41);
+    border-top: 3px solid rgb(158, 158, 158);
+    border-bottom: 3px solid rgb(158, 158, 158);
 }
 
 #info-jogador-header {
-    padding-top: 20px;
+    padding-top: 50px;
     text-align: center;
 }
 
 #info-jogador-body {
-    padding-top: 200px;
-    padding-left: 170px;
+    padding-top: 100px;
+    padding-left: 120px;
 }
-
-
 
 #img-jogador {
     padding-top: 100px;
     float: right;
     color: white;
-    background-color: orange;
-    height: 700px;
+    height: 600px;
     width: 30%;
+    background-color: rgb(41, 41, 41);
+    border-top: 3px solid rgb(158, 158, 158);
+    border-bottom: 3px solid rgb(158, 158, 158);
+    border-right: 3px solid rgb(158, 158, 158);
 }

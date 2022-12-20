@@ -59,37 +59,45 @@
 
     <!-- OBJETO COM JOGADOR PELO ID -->
     <h3>PROCURAR JOGADOR</h3>
-    <div class="quadrante-com-01">
-        <p>Utilize a ferramenta para exibir as estatísticas do jogador selecionado. Para isso, insira o <b>nickname</b>
-            do jogador
-            em questão. Por favor, insira o nickname, <b>apenas</b>, em letras minúsculas.
-        </p>
-        <p style="font-style:italic">Exemplo: "kscerato"</p>
-        <div style="color: white;">
-            <label for="nomeplayer" style="color: white">ID do usuário:</label>
-            <input id="nomeplayer" name="nomeplayer" type="string" #nomeplayer>
+    <div id="primeira-margem">
+        <div class="quadrante-com-01">
+            <p>Utilize a ferramenta para procurar o jogador e exibir suas estatísicas. Para isso, insira o
+                <b>nickname</b>
+                do jogador
+                em questão. Por favor, insira o nickname, <b>apenas</b>, em letras minúsculas.
+            </p>
+            <p style="font-style:italic">Exemplo: "kscerato"</p>
+            <div style="color: white;">
+                <label for="nomeplayer" style="color: white">ID do usuário:</label>
+                <input id="nomeplayer" name="nomeplayer" type="string" #nomeplayer>
+            </div>
+            <input type="button" value="Procurar" (click)="exibirDadosJogadorID(nomeplayer)">
         </div>
-        <input type="button" value="Procurar" (click)="exibirDadosJogadorID(nomeplayer)">
+
+        <div></div>
+        <div id="info-jogador">
+            <div id="info-jogador-header">
+                <h2>{{ JogadorID.nickname }} ({{ JogadorID.id }})</h2>
+                <h4>{{ JogadorID.name }}, {{ JogadorID.age }} anos</h4>
+            </div>
+            <div id="info-jogador-body">
+                <h2>- Time: {{ JogadorID.team.name }} ({{ JogadorID.team.id }})</h2>
+                <h2>- Rating: {{ JogadorID.rating }} </h2>
+                <h2>- Kills p/round: {{ JogadorID.kpr }}</h2>
+                <h2>- Mortes p/round: {{ JogadorID.dpr }} </h2>
+                <h2>- Impacto no jogo: {{ JogadorID.impact }} </h2>
+                <h2>- Participação p/round {{ JogadorID.kast }}</h2>
+                <h2>- Porcentagem de HS {{ JogadorID.headshots }}</h2>
+                <h2>- Mapas Jogados: {{ JogadorID.mapsPlayed }} </h2>
+            </div>
+        </div>
+        <div id="img-jogador">
+            <img [src]="JogadorID.image">
+        </div>
+
     </div>
 
-    <div></div>
-    <div id="info-jogador">
-        <div id="info-jogador-header">
-            <h2>{{ JogadorID.nickname }}({{ JogadorID.id }})</h2>
-        </div>
-        <div id="info-jogador-body">
-            <h2>Idade: {{ JogadorID.age }} </h2>
-            <h2>Time: {{ JogadorID.team.name }} ({{ JogadorID.team.id }})</h2>
-            <h2>Rating: {{ JogadorID.rating }} </h2>
-            <h2>Mapas Jogados: {{ JogadorID.mapsPlayed }} </h2>
-        </div>
-    </div>
-    <div id="img-jogador">
-        <img [src]="JogadorID.image">
-    </div>
-
-
-    <h3>PROCURAR TIME</h3>
+    <h3 style="padding-top: 700px">PROCURAR TIME</h3>
     <!-- OBJETO COM TIME PELO ID -->
     <div style="color: white; padding-bottom: 200px;">
         <label for="idteam" style="color: white">ID do usuário:</label>

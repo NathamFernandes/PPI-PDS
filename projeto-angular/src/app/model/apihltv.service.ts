@@ -1,3 +1,4 @@
+import { PlayerComp } from './hltv-ts/playercomp';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -38,5 +39,7 @@ export class ApihltvService {
     let URL = `https://long-teal-beetle-wig.cyclic.app/times/${idteam}`
     return this.http.get(URL)
   }
+
+  
 
 }

@@ -12,34 +12,24 @@
 <body>
     <h3>TIMES BRASILEIROS</h3>
     <div id="time-nation">
-        <a href="/nation">
-            <img class="brazilteams" src="../../assets/img/times-brasileiros/imagem-nation-branca.png">
-            <p id="legenda-times-brasil">00NATION</p>
-        </a>
+        <img class="brazilteams" src="../../assets/img/times-brasileiros/imagem-nation-branca.png">
+        <p id="legenda-times-brasil">00NATION</p>
     </div>
     <div id="time-imperial">
-        <a href="/imperial">
-            <img class="brazilteams" src="../../assets/img/times-brasileiros/imagem-imperial.webp">
-            <p id="legenda-times-brasil">IMPERIAL</p>
-        </a>
+        <img class="brazilteams" src="../../assets/img/times-brasileiros/imagem-imperial.webp">
+        <p id="legenda-times-brasil">IMPERIAL</p>
     </div>
     <div id="time-furia">
-        <a href="/furia">
-            <img class="brazilteams" src="../../assets/img/times-brasileiros/imagem-furia.png">
-            <p id="legenda-times-brasil">FURIA</p>
-        </a>
+        <img class="brazilteams" src="../../assets/img/times-brasileiros/imagem-furia.png">
+        <p id="legenda-times-brasil">FURIA</p>
     </div>
     <div id="time-pain">
-        <a href="/pain">
-            <img class="brazilteams" src="../../assets/img/times-brasileiros/imagem-pain.png">
-            <p id="legenda-times-brasil">PAIN</p>
-        </a>
+        <img class="brazilteams" src="../../assets/img/times-brasileiros/imagem-pain.png">
+        <p id="legenda-times-brasil">PAIN</p>
     </div>
     <div id="time-fluxo">
-        <a href="/fluxo">
-            <img class="brazilteams" src="../../assets/img/times-brasileiros/imagem-fluxo.png">
-            <p id="legenda-times-brasil">FLUXO</p>
-        </a>
+        <img class="brazilteams" src="../../assets/img/times-brasileiros/imagem-fluxo.png">
+        <p id="legenda-times-brasil">FLUXO</p>
     </div>
     <div></div>
     <div id="jogador-01">
@@ -70,13 +60,16 @@
     <!-- OBJETO COM JOGADOR PELO ID -->
     <h3>PROCURAR JOGADOR</h3>
     <div class="quadrante-com-01">
-        <p>Utilize a ferramenta para exibir as estatísticas do jogador selecionado. Para isso, utilize o ID do
-            jogador, localizado na URL do perfil em questão, como mostra os exemplos abaixo:</p>
+        <p>Utilize a ferramenta para exibir as estatísticas do jogador selecionado. Para isso, insira o <b>nickname</b>
+            do jogador
+            em questão. Por favor, insira o nickname, <b>apenas</b>, em letras minúsculas.
+        </p>
+        <p style="font-style:italic">Exemplo: "kscerato"</p>
         <div style="color: white;">
-            <label for="idplayer" style="color: white">ID do usuário:</label>
-            <input id="idplayer" name="idplayer" type="number" #idplayer>
+            <label for="nomeplayer" style="color: white">ID do usuário:</label>
+            <input id="nomeplayer" name="nomeplayer" type="string" #nomeplayer>
         </div>
-        <input type="button" value="Procurar" (click)="exibirDadosJogadorID(idplayer)">
+        <input type="button" value="Procurar" (click)="exibirDadosJogadorID(nomeplayer)">
     </div>
 
     <div></div>

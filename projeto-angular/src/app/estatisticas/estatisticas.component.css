@@ -36,7 +36,6 @@ ul {
     padding-top: 40px;
     font-family: RobotoMono;
     font-style: italic;
-    width: auto;
 }
 
 .nickname-both {
@@ -55,7 +54,6 @@ ul {
 
 .the-entry {
     border-radius: 5px;
-    
 }
 
 .the-entry::placeholder {
@@ -305,7 +303,7 @@ ul {
     }
     
     .divisao-segunda {
-        height: 900px;
+        height: 1000px;
         border: solid black 1px;
     }
 
@@ -330,6 +328,7 @@ ul {
     }
 
     .quadrante02 {
+        padding-top: 30px;
         padding-left: 55px;
     }
 
@@ -343,6 +342,7 @@ ul {
 
     .quadrante04 {
         padding-right: 40px;
+        padding-top: 70px;
     }
 
     .img-perfil {
@@ -354,7 +354,7 @@ ul {
     }
 
     .nickname {
-        padding-top: 25px;
+        padding-top: 10px;
     }
     .formGroup {
         padding-bottom: 5px;

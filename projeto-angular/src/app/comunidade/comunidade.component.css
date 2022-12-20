@@ -19,6 +19,13 @@ body p {
     text-align: justify;
 }
 
+body ul {
+    font-size: 20px;
+    padding: 20px;
+    padding-left: 40px;
+    text-align: justify;
+}
+
 body h4 {
     font-size: 30px;
     padding: 20px;
@@ -34,7 +41,7 @@ a:hover {
 }
 
 #imagens-compo {
-    margin-top: 100px;
+    margin-top: 20px;
     width: auto;
     height: auto;
 }
@@ -64,12 +71,14 @@ img {
     text-align: center;
 }
 
-#img-esquerda, #img-meio, #img-direita {
-    margin: auto ;
+#img-esquerda,
+#img-meio,
+#img-direita {
+    margin: auto;
 }
 
 #p-de-img {
-    text-align: center;    
+    text-align: center;
     font-style: italic;
     font-size: medium;
     padding: 10px;
@@ -138,9 +147,6 @@ img {
         padding: 20px;
     }
 
-    #imagens-compo {
-        margin-top: 40px;
-    }
 }
 
 @media (max-width: 514px) {
@@ -149,6 +155,10 @@ img {
     }
 
     body p {
+        font-size: 15px;
+    }
+
+    body ul {
         font-size: 15px;
     }
 }

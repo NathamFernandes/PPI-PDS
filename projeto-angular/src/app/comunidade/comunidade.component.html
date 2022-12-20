@@ -33,6 +33,8 @@
 
     <img id="logo-if" src="../../assets/img/ifrn-logo.png">
 
+    <h4>Mas... Como surgiu o CSBrasil?</h4>
+
     <p>Visando um âmbito de maior conforto para com o discente, o tema escolhido para a aplicação se baseou na
         comunidade de Counter-Strike: Global Offensive (CS:GO) brasileira, uma das maiores comunidades de jogos do
         Brasil. Para demonstrar tamanha abrangência, <a href="https://blog.leetify.com/state-of-csgo-july-2022/">uma
@@ -54,12 +56,38 @@
         aplicação, abordará um pouco mais sobre a aplicação e seus objetivos, bem como um breve retrospecto sobre as
         fundamentações técnicas utilizadas no projeto. </p>
 
-    <p>No momento o site está hospedado no domínio da Netlify, em:
-        [https://csbrasil.netlify.app/](https://csbrasil.netlify.app/), e está recebendo as devidas atualizações ao
-        decorrer do projeto. O site está subdivido em quatro partes principais: o
-        **[Home](https://csbrasil.netlify.app/)**, a aba do **[Competitivo](https://csbrasil.netlify.app/competitivo)**,
-        a aba de **[Estatísticas](https://csbrasil.netlify.app/estatisticas)** e, por fim, a aba de
-        **[Comunidade](https://csbrasil.netlify.app/comunidade)**.</p>
+    <h4>Especificações técnicas</h4>
+
+    <p>No momento o site está hospedado no domínio da Netlify e está recebendo as devidas atualizações ao
+        decorrer do projeto. Desa forma, o projeto está sendo realizado através do framework Angular, em sua versão 14.
+        Para esse projeto, também foram
+        utilizadas APIs para demonstração de informações. A primeira delas, implementada através da biblioteca Node.js
+        <a href="https://www.npmjs.com/package/hltv-api">hltv-api</a>, possui inúmeras versatilidades e é baseada no
+        site de dados estatísticos de CS:GO, a <a href="https://www.hltv.org/">HLTV</a>.
+    </p>
+
+    <p> A segunda delas, é a API da steam criada pelo discente, a qual se conecta à API fornecida pela steam e extrai
+        apenas
+        informações do CS:GO. O motivo pela utilização de uma API que extrai as informações de outra API está
+        relacionado ao
+        bloqueio do CORS, não implementado na API original. Por essa razão, a biblioteca <a
+            href="https://www.npmjs.com/package/node-fetch">node-fetch</a> cumpre a função da
+        extração de dados anteriormente citada. Além disso, a biblioteca <a
+            href="https://www.npmjs.com/package/steamapi">steamapi</a> também converte nomes da steam em IDs,
+        bem
+        como mostra dados do usuário da Steam, de modo a complementar a API criada pelo discente.</p>
+
+    <p> Ambas as APIs estão hospedadas na plataforma <a href="https://www.cyclic.sh">Cyclic</a>, uma plataforma em nuvem
+        para hospedagem de serviços.</p>
+
+    <p> Links para acessar as APIs hospedadas no Cyclic:</p>
+
+    <ul>
+        <li>- HLTV: <a href="https://long-teal-beetle-wig.cyclic.app">long-teal-beetle-wig.cyclic.app</a></li>
+        <li>- Steam: <a href="https://elated-gray-snaps.cyclic.app">elated-gray-snaps.cyclic.app</a></li>
+    </ul>
+
+    <h3>Ferinhas participantes</h3>
 
     <div id="imagens-compo">
         <div id="div-esquerda">

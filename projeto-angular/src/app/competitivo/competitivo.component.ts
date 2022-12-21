@@ -1,3 +1,4 @@
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Noticia } from '../model/hltv-ts/noticia';
 import { Time } from '../model/hltv-ts/time';
 import { ApihltvService } from './../model/apihltv.service';
@@ -17,13 +18,21 @@ export class CompetitivoComponent implements OnInit {
   noticias: Noticia[];
   data = new Date;
   novoJogador = new PlayerComp;
+  nomeJogadorForm; nomeTimeForm: FormGroup;
 
-  constructor(private hs: ApihltvService) {
+  constructor(private hs: ApihltvService, private fb: FormBuilder) {
     this.listaJogadores = [];
     this.listaTimes = [];
     this.noticias = [];
     this.JogadorID = new PlayerComp;
     this.TimeID = new Time;
+    this.nomeJogadorForm = this.fb.group({
+      nomeplayer: ["", [Validators.required, Validators.pattern('^[a-z0-9_\-]+$')]],
+    });
+    this.nomeTimeForm = this.fb.group({
+      nometime: ["", [Validators.required, Validators.pattern('^[a-z0-9_\-]+$')]],
+    });
+
   }
 
   ngOnInit(): void {

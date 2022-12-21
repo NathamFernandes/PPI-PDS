@@ -52,27 +52,6 @@ ul {
     padding: 5px;
 }
 
-.the-entry {
-    border-radius: 5px;
-}
-
-.the-entry::placeholder {
-    font-style: italic;
-    text-align: center;
-}
-
-.the-button {
-    color: black;
-    border: 3px solid #b16767;
-    font-family: Poppins;
-    padding: 3px;
-    border-radius: 10px;
-}
-
-.formGroup {
-    padding-bottom: 15px;
-}
-
 .mensagem-alerta {
     background-color: rgb(228, 228, 135);
     padding: 15px;

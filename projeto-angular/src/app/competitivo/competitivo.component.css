@@ -100,7 +100,7 @@ a:hover {
 #jogador-03,
 #jogador-04,
 #jogador-05 {
-    height: 500px;
+    height: 420px;
     width: 20%;
     display: inline-block;
     background-repeat: no-repeat;
@@ -187,7 +187,6 @@ a:hover {
     color: white;
     height: 600px;
     width: 30%;
-
     border-top: 3px solid rgb(158, 158, 158);
     border-bottom: 3px solid rgb(158, 158, 158);
     border-right: 3px solid rgb(158, 158, 158);
@@ -236,10 +235,72 @@ a:hover {
         transition: all 0.3s;
         margin: -8px;
     }
+
+    #jogador-01,
+    #jogador-02,
+    #jogador-03,
+    #jogador-04,
+    #jogador-05 {
+        height: 250px;
+    }
+
+    .quadrante-com-01,
+    .quadrante-com-02 {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 70px;
+        height: 500px;
+    }
+
+    #info-jogador,
+    #info-time {
+        height: 500px;
+    }
+
+    #info-jogador-header {
+        padding-top: 20px;
+        text-align: center;
+    }
+    
+    #info-jogador-body {
+        padding-top: 20px;
+        padding-left: 30px;
+    }
+
+    #img-jogador,
+    #img-time {
+        padding-top: 100px;
+        float: right;
+        color: white;
+        height: 500px;
+        width: 30%;
+        border-top: 3px solid rgb(158, 158, 158);
+        border-bottom: 3px solid rgb(158, 158, 158);
+        border-right: 3px solid rgb(158, 158, 158);
+    }
+
+    .img-player {
+        width: 250px;
+        height: 270px;
+    }
+    
+    body h2 {
+        font-size: 22px;
+    }
+
+    body h4 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1250px) {
+    #primeira-margem {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
 }
 
 @media (max-width: 1050px) {
-
     #time-nation,
     #time-imperial,
     #time-furia,
@@ -255,6 +316,14 @@ a:hover {
     #legenda-times-brasil {
         font-size: large;
         padding: 20px;
+    }
+
+    #jogador-01,
+    #jogador-02,
+    #jogador-03,
+    #jogador-04,
+    #jogador-05 {
+        height: 150px;
     }
 }
 

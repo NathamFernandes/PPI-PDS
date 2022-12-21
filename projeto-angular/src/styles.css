@@ -184,6 +184,27 @@ footer {
     background-color: rgb(155, 153, 153);
 }
 
+.the-entry {
+    border-radius: 5px;
+}
+
+.the-entry::placeholder {
+    font-style: italic;
+    text-align: center;
+}
+
+.the-button {
+    color: black;
+    border: 3px solid #b16767;
+    font-family: Poppins;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+.formGroup {
+    padding-bottom: 15px;
+}
+
 /* MEDIA HEDAER (POR ENQUANTO) */
 
 @media (max-width: 1140px) {

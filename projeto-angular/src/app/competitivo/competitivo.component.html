@@ -49,11 +49,12 @@
                 em questão. Por favor, insira o nickname, <b>apenas</b>, em letras minúsculas.
             </p>
             <p style="font-style:italic">Exemplo: "kscerato"</p>
-            <div style="color: white;">
-                <label for="nomeplayer" style="color: white">ID do usuário:</label>
-                <input id="nomeplayer" name="nomeplayer" type="string" #nomeplayer>
-            </div>
-            <input type="button" value="Procurar" (click)="exibirDadosJogadorID(nomeplayer)">
+            <form class="formGroup" [formGroup]="nomeJogadorForm">
+                <input class="the-entry" id="nomeplayer" name="nomeplayer" placeholder="NOME DO JOGADOR"
+                    formControlName="nomeplayer" type="string" #nomeplayer>
+            </form>
+            <input class="the-button" type="button" value="Procurar" [disabled]="!nomeJogadorForm.valid"
+                (click)="exibirDadosJogadorID(nomeplayer)">
         </div>
 
         <div></div>
@@ -74,7 +75,7 @@
             </div>
         </div>
         <div id="img-jogador">
-            <img [src]="JogadorID.image">
+            <img class="img-player" [src]="JogadorID.image">
         </div>
 
     </div>
@@ -89,9 +90,13 @@
                 momento.
             </p>
             <p style="font-style:italic">Exemplo: "natus vincere"</p>
-            <label for="nometime" style="color: white">ID do usuário:</label>
-            <input id="nometime" name="nometime" type="string" #nometime>
-            <input type="button" value="Procurar" (click)="exibirDadosTimeID(nometime)">
+            <form class="formGroup" [formGroup]="nomeTimeForm">
+                <input class="the-entry" id="nometime" name="nometime" placeholder="NOME DO TIME"
+                    formControlName="nometime" type="string" #nometime>
+            </form>
+
+            <input class="the-button" type="button" value="Procurar" [disabled]="!nomeTimeForm.valid"
+                (click)="exibirDadosTimeID(nometime)">
         </div>
         <div id="info-time">
             <div id="info-jogador-header">

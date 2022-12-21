@@ -21,10 +21,9 @@ export class CompetitivoComponent implements OnInit {
   constructor(private hs: ApihltvService) {
     this.listaJogadores = [];
     this.listaTimes = [];
+    this.noticias = [];
     this.JogadorID = new PlayerComp;
     this.TimeID = new Time;
-    this.noticias = [];
-
   }
 
   ngOnInit(): void {
@@ -46,9 +45,12 @@ export class CompetitivoComponent implements OnInit {
     })
   }
 
-  exibirDadosTimeID(idteam: HTMLInputElement): void {
-    this.hs.obterJogadorPeloID(+idteam.value).subscribe(res => {
-      this.JogadorID = res
+  exibirDadosTimeID(nometime: HTMLInputElement): void {
+    let idtime = this.achaTime(nometime.value, this.listaTimes)
+    console.log(idtime)
+    this.hs.obterTimePeloID(idtime).subscribe(res => {
+      this.TimeID = res
+      console.log(this.TimeID)
     })
   }
 
@@ -56,5 +58,12 @@ export class CompetitivoComponent implements OnInit {
     let objetoplayer = lista.find((x: any) => x.nickname.toLowerCase() === nome)!
     let idplayer = objetoplayer['id']
     return idplayer
+  }
+
+  achaTime(nome: string, lista: Time[]) {
+    let objetotime = lista.find((x: any) => x.name.toLowerCase() === nome)!
+    console.log(objetotime)
+    let idtime = +objetotime['id']
+    return idtime
   }
 }

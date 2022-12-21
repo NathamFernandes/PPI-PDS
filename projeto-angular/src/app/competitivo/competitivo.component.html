@@ -100,13 +100,17 @@
     <h3 style="padding-top: 700px">PROCURAR TIME</h3>
     <!-- OBJETO COM TIME PELO ID -->
     <div style="color: white; padding-bottom: 200px;">
-        <label for="idteam" style="color: white">ID do usuário:</label>
-        <input id="idteam" name="idteam" type="number" #idteam>
+        <label for="nometime" style="color: white">ID do usuário:</label>
+        <input id="nometime" name="nometime" type="string" #nometime>
     </div>
-    <input type="button" value="Procurar" (click)="exibirDadosTimeID(idteam)">
+    <input type="button" value="Procurar" (click)="exibirDadosTimeID(nometime)">
 
     <div style="color: white; padding-bottom: 200px;">
         <h2>ID: {{ TimeID.name }}</h2>
+        <h2>Ranking: {{ TimeID.ranking }}</h2>
+        <h2>Idade média do time: {{ TimeID.averagePlayerAge }}</h2>
+        <h2>Players: 1 - {{ TimeID.players[0].nickname }}, {{ TimeID.players[0].country.name }},<img [src]="TimeID.players[0].country.flag"></h2>
+        <h2>Players: </h2>
     </div>
 
     <h3>NOTÍCIAS ({{ data.getDate() }}/{{ data.getMonth() + 1 }}/{{ data.getFullYear() }})</h3>

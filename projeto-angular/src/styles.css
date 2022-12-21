@@ -345,3 +345,208 @@ footer {
 #time-fluxo:hover~#jogador-05 {
     background-image: url(assets/img/jogadores-fluxo/lux.png);
 }
+
+@media (max-width: 1560px) {
+    #time-nation:hover~#jogador-01 {
+        background-size: 250px 250px;
+    }
+
+    #time-nation:hover~#jogador-02 {
+        background-size: 250px 250px;
+    }
+
+    #time-nation:hover~#jogador-03 {
+        background-size: 250px 250px;
+    }
+
+    #time-nation:hover~#jogador-04 {
+        background-size: 250px 250px;
+    }
+
+    #time-nation:hover~#jogador-05 {
+        background-size: 250px 250px;
+    }
+
+    #time-imperial:hover~#jogador-01 {
+        background-size: 250px 250px;
+    }
+
+    #time-imperial:hover~#jogador-02 {
+        background-size: 250px 250px;
+    }
+
+    #time-imperial:hover~#jogador-03 {
+        background-size: 250px 250px;
+    }
+
+    #time-imperial:hover~#jogador-04 {
+        background-size: 250px 250px;
+    }
+
+    #time-imperial:hover~#jogador-05 {
+        background-size: 250px 250px;
+    }
+
+    #time-furia:hover~#jogador-01 {
+        background-size: 250px 250px;
+    }
+
+    #time-furia:hover~#jogador-02 {
+        background-size: 250px 250px;
+    }
+
+    #time-furia:hover~#jogador-03 {
+        background-size: 250px 250px;
+    }
+
+    #time-furia:hover~#jogador-04 {
+        background-size: 250px 250px;
+    }
+
+    #time-furia:hover~#jogador-05 {
+        background-size: 250px 250px;
+    }
+
+    #time-pain:hover~#jogador-01 {
+        background-size: 250px 250px;
+    }
+
+    #time-pain:hover~#jogador-02 {
+        background-size: 250px 250px;
+    }
+
+    #time-pain:hover~#jogador-03 {
+        background-size: 250px 250px;
+    }
+
+    #time-pain:hover~#jogador-04 {
+        background-size: 250px 250px;
+    }
+
+    #time-pain:hover~#jogador-05 {
+        background-size: 250px 250px;
+    }
+
+    #time-fluxo:hover~#jogador-01 {
+        background-size: 250px 250px;
+    }
+
+    #time-fluxo:hover~#jogador-02 {
+        background-size: 250px 250px;
+    }
+
+    #time-fluxo:hover~#jogador-03 {
+        background-size: 250px 250px;
+    }
+
+    #time-fluxo:hover~#jogador-04 {
+        background-size: 250px 250px;
+    }
+
+    #time-fluxo:hover~#jogador-05 {
+        background-size: 250px 250px;
+    }
+}
+
+
+@media (max-width: 1050px) {
+    #time-nation:hover~#jogador-01 {
+        background-size: 150px 150px;
+    }
+
+    #time-nation:hover~#jogador-02 {
+        background-size: 150px 150px;
+    }
+
+    #time-nation:hover~#jogador-03 {
+        background-size: 150px 150px;
+    }
+
+    #time-nation:hover~#jogador-04 {
+        background-size: 150px 150px;
+    }
+
+    #time-nation:hover~#jogador-05 {
+        background-size: 150px 150px;
+    }
+
+    #time-imperial:hover~#jogador-01 {
+        background-size: 150px 150px;
+    }
+
+    #time-imperial:hover~#jogador-02 {
+        background-size: 150px 150px;
+    }
+
+    #time-imperial:hover~#jogador-03 {
+        background-size: 150px 150px;
+    }
+
+    #time-imperial:hover~#jogador-04 {
+        background-size: 150px 150px;
+    }
+
+    #time-imperial:hover~#jogador-05 {
+        background-size: 150px 150px;
+    }
+
+    #time-furia:hover~#jogador-01 {
+        background-size: 150px 150px;
+    }
+
+    #time-furia:hover~#jogador-02 {
+        background-size: 150px 150px;
+    }
+
+    #time-furia:hover~#jogador-03 {
+        background-size: 150px 150px;
+    }
+
+    #time-furia:hover~#jogador-04 {
+        background-size: 150px 150px;
+    }
+
+    #time-furia:hover~#jogador-05 {
+        background-size: 150px 150px;
+    }
+
+    #time-pain:hover~#jogador-01 {
+        background-size: 150px 150px;
+    }
+
+    #time-pain:hover~#jogador-02 {
+        background-size: 150px 150px;
+    }
+
+    #time-pain:hover~#jogador-03 {
+        background-size: 150px 150px;
+    }
+
+    #time-pain:hover~#jogador-04 {
+        background-size: 150px 150px;
+    }
+
+    #time-pain:hover~#jogador-05 {
+        background-size: 150px 150px;
+    }
+
+    #time-fluxo:hover~#jogador-01 {
+        background-size: 150px 150px;
+    }
+
+    #time-fluxo:hover~#jogador-02 {
+        background-size: 150px 150px;
+    }
+
+    #time-fluxo:hover~#jogador-03 {
+        background-size: 150px 150px;
+    }
+
+    #time-fluxo:hover~#jogador-04 {
+        background-size: 150px 150px;
+    }
+
+    #time-fluxo:hover~#jogador-05 {
+        background-size: 150px 150px;
+    }
+}

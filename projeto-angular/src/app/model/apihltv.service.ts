@@ -6,11 +6,14 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
+/* Repositório da API: https://github.com/NathamFernandes/heroku-api-hltv */
+
 export class ApihltvService {
 
   constructor(private http: HttpClient) { }
 
-  obterNoticias() : Observable<any> {
+  obterNoticias(): Observable<any> {
     let URL = 'https://long-teal-beetle-wig.cyclic.app/noticias'
     return this.http.get(URL);
   }
@@ -30,16 +33,13 @@ export class ApihltvService {
     return this.http.get(URL)
   }
 
-  obterJogadorPeloID(idplayer: number) : Observable<any> {
+  obterJogadorPeloID(idplayer: number): Observable<any> {
     let URL = `https://long-teal-beetle-wig.cyclic.app/jogadores/${idplayer}`
     return this.http.get(URL)
   }
 
-  obterTimePeloID(idteam: number) : Observable<any> {
+  obterTimePeloID(idteam: number): Observable<any> {
     let URL = `https://long-teal-beetle-wig.cyclic.app/times/${idteam}`
     return this.http.get(URL)
   }
-
-  
-
 }

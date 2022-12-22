@@ -17,7 +17,8 @@
     font-size: 60px;
 }
 
-#div-esquerda, #div-direita {
+#div-esquerda,
+#div-direita {
     padding: 60px;
     margin-left: 200px;
     margin-right: 200px;
@@ -45,7 +46,8 @@
     background-color: rgb(60, 63, 66);
 }
 
-#p-esquerda, #p-direita {
+#p-esquerda,
+#p-direita {
     color: white;
     word-break: normal;
     font-size: x-large;
@@ -67,12 +69,12 @@
     margin-top: -2.5%;
 }
 
-    .container-box-right-2 {
-        width: 200px;
-        float: right;
-        padding-right: 3%;
-        margin-top: 0%;
-    }
+.container-box-right-2 {
+    width: 200px;
+    float: right;
+    padding-right: 3%;
+    margin-top: 0%;
+}
 
 .container-box-left {
     width: 200px;
@@ -91,6 +93,7 @@
     .container-box-left {
         padding-top: 2%;
     }
+
     .container-box-right-2 {
         padding-top: 3%;
     }
@@ -120,12 +123,14 @@
     .container-box-left {
         padding-top: 11%;
     }
+
     .container-box-right-2 {
         padding-top: 15%;
     }
 }
 
 @media (max-width: 1090px) {
+
     #div-esquerda,
     #div-direita {
         display: flex;
@@ -137,7 +142,7 @@
     }
 
     .container-box-right,
-    .container-box-left, 
+    .container-box-left,
     .container-box-right-2 {
         margin: auto;
         padding-top: 0;
@@ -158,19 +163,22 @@
 }
 
 @media (max-width: 820px) {
+
     #div-esquerda,
     #div-direita {
         width: 500px;
         padding: 40px;
     }
 
-    #div-esquerda:hover, #div-direita:hover {
+    #div-esquerda:hover,
+    #div-direita:hover {
         padding: 45px;
         transition: all 0.3s;
     }
 }
 
 @media (max-width: 658px) {
+
     #div-esquerda,
     #div-direita {
         width: 350px;
@@ -178,6 +186,7 @@
 }
 
 @media (max-width: 550px) {
+
     #div-esquerda,
     #div-direita {
         width: 300px;
@@ -196,9 +205,9 @@
         text-align: center;
     }
 
-    #div-esquerda:hover, #div-direita:hover {
+    #div-esquerda:hover,
+    #div-direita:hover {
         padding: 20px;
         transition: all 0.3s;
     }
 }
-

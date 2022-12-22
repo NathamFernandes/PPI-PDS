@@ -11,6 +11,8 @@ import { CompetitivoComponent } from './competitivo/competitivo.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule, Component } from '@angular/core';
 
+/* As rotas dos times brasileiros (Nation, Imperial, Furia, Pain, Fluxo) não foram implementadas, juntamente com seus componentes, pela falta de tempo para tal. */
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },

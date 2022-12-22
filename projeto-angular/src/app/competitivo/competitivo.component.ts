@@ -27,10 +27,10 @@ export class CompetitivoComponent implements OnInit {
     this.JogadorID = new PlayerComp;
     this.TimeID = new Time;
     this.nomeJogadorForm = this.fb.group({
-      nomeplayer: ["", [Validators.required, Validators.pattern('^[a-z0-9_\-]+$')]],
+      nomeplayer: ["", [Validators.required, Validators.pattern('^[a-z0-9 \-]+$')]],
     });
     this.nomeTimeForm = this.fb.group({
-      nometime: ["", [Validators.required, Validators.pattern('^[a-z0-9_\-]+$')]],
+      nometime: ["", [Validators.required, Validators.pattern('^[a-z0-9 \-]+$')]],
     });
 
   }

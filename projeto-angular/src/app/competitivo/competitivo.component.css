@@ -41,42 +41,6 @@ a:hover {
     text-decoration: underline;
 }
 
-#time-nation {
-    width: 14%;
-    display: inline-block;
-    margin: auto;
-    text-align: center;
-    margin-left: 15%;
-}
-
-#time-imperial {
-    width: 14%;
-    display: inline-block;
-    margin: auto;
-    text-align: center;
-}
-
-#time-furia {
-    width: 14%;
-    display: inline-block;
-    margin: auto;
-    text-align: center;
-}
-
-#time-pain {
-    width: 14%;
-    display: inline-block;
-    margin: auto;
-    text-align: center;
-}
-
-#time-fluxo {
-    width: 14%;
-    display: inline-block;
-    margin: auto;
-    text-align: center;
-}
-
 #time-nation:hover .brazilteams,
 #time-imperial:hover .brazilteams,
 #time-furia:hover .brazilteams,
@@ -88,13 +52,6 @@ a:hover {
     margin: -8px;
 }
 
-.brazilteams {
-    width: 150px;
-    height: 150px;
-    padding: 5px;
-    transition: all 0.3s;
-}
-
 #jogador-01,
 #jogador-02,
 #jogador-03,
@@ -104,117 +61,6 @@ a:hover {
     width: 20%;
     display: inline-block;
     background-repeat: no-repeat;
-}
-
-#legenda-times-brasil {
-    font-family: Agency FB;
-    font-size: x-large;
-    font-weight: bolder;
-    color: white;
-    padding: 20px;
-}
-
-#div-noticias {
-    width: 290px;
-    height: 200px;
-    background-color: rgb(85, 85, 85);
-    display: inline-flex;
-    text-align: center;
-    padding: 10px;
-    margin-left: 75px;
-    padding-top: 15px;
-    border-radius: 10px;
-    margin-bottom: 50px;
-}
-
-.quadrante-com-01,
-.quadrante-com-02 {
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 200px;
-    float: left;
-    text-align: center;
-    width: 40%;
-    height: 600px;
-    border: 3px solid rgb(158, 158, 158);
-}
-
-.quadrante-com-01 {
-    background-color: rgb(80, 80, 80);
-}
-
-.quadrante-com-02 {
-    background-color: rgb(41, 41, 41);
-}
-
-#primeira-margem {
-    margin-left: 150px;
-    margin-right: 150px;
-}
-
-#info-jogador,
-#info-time {
-    float: left;
-    color: white;
-    height: 600px;
-    width: 30%;
-    border-top: 3px solid rgb(158, 158, 158);
-    border-bottom: 3px solid rgb(158, 158, 158);
-}
-
-#info-jogador {
-    background-color: rgb(41, 41, 41);
-}
-
-#info-time {
-    background-color: rgb(80, 80, 80);
-}
-
-#info-jogador-header {
-    padding-top: 50px;
-    text-align: center;
-}
-
-#info-jogador-body {
-    padding-top: 60px;
-    padding-left: 60px;
-}
-
-#img-jogador,
-#img-time {
-    padding-top: 85px;
-    float: right;
-    color: white;
-    height: 600px;
-    width: 30%;
-    border-top: 3px solid rgb(158, 158, 158);
-    border-bottom: 3px solid rgb(158, 158, 158);
-    border-right: 3px solid rgb(158, 158, 158);
-}
-
-#img-jogador {
-    background-color: rgb(41, 41, 41);
-}
-
-#img-time {
-    background-color: rgb(80, 80, 80);
-}
-
-#div-jogadores {
-    width: 500px;
-}
-
-#h2-players {
-    display: inline-flex;
-}
-
-#padding-h3 {
-    margin-top: 700px;
-}
-
-#logo-team {
-    width: 85%;
-    height: 85%;
 }
 
 @media (max-width: 1560px) {
@@ -259,9 +105,8 @@ a:hover {
 
     #info-jogador-header {
         padding-top: 20px;
-        text-align: center;
     }
-    
+
     #info-jogador-body {
         padding-top: 20px;
         padding-left: 30px;
@@ -278,7 +123,7 @@ a:hover {
         width: 250px;
         height: 270px;
     }
-    
+
     body h2 {
         font-size: 22px;
     }
@@ -299,7 +144,9 @@ a:hover {
     }
 }
 
+
 @media (max-width: 1050px) {
+
     #time-nation,
     #time-imperial,
     #time-furia,
@@ -350,6 +197,7 @@ a:hover {
         width: 220px;
         height: 240px;
     }
+
     #padding-h3 {
         margin-top: 500px;
     }
